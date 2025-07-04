@@ -10,152 +10,254 @@
   <meta name="author" content="Austin Weaver">
   <link rel="stylesheet" href="assets/css/main.css?v=1">
   <style>
-    /* Mobile Responsiveness Fixes */
+    /* Comprehensive Mobile Responsiveness Fixes */
+    
+    /* Force mobile-first approach */
+    * {
+      box-sizing: border-box !important;
+    }
+    
+    /* Ensure text is always visible and readable */
+    body, html {
+      font-size: 16px !important;
+      line-height: 1.5 !important;
+      color: #fff !important;
+      background-color: #0c0c0c !important;
+      -webkit-text-size-adjust: 100% !important;
+      -ms-text-size-adjust: 100% !important;
+    }
+    
+    /* Mobile breakpoint - apply to all mobile devices */
     @media (max-width: 768px) {
-      /* Fix viewport and container */
+      /* Reset viewport and container */
+      .l-viewport {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow-x: hidden !important;
+      }
+      
       .l-wrapper {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 15px;
+        padding: 0 15px !important;
+        margin: 0 !important;
       }
       
-      /* Fix text visibility and sizing */
-      body {
-        font-size: 16px !important;
-        line-height: 1.5 !important;
+      .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+      }
+      
+      /* Fix all sections */
+      .l-section {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 20px 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      .section--is-active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 1 !important;
       }
       
       /* Fix intro section */
       .intro {
+        width: 100% !important;
         max-width: 100% !important;
-        padding: 20px 0;
+        padding: 20px 15px !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
       }
       
       .intro--banner {
+        width: 100% !important;
         height: auto !important;
-        min-height: 200px;
-        padding: 20px 0;
+        min-height: 300px !important;
+        padding: 20px 0 !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      
+      .intro--banner::before,
+      .intro--banner::after {
+        display: none !important;
       }
       
       .intro--banner h1 {
         font-size: 2.5rem !important;
+        font-weight: 900 !important;
         line-height: 1.2 !important;
         position: relative !important;
         top: auto !important;
         right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
         text-align: center !important;
-        margin: 20px 0;
+        margin: 20px 0 !important;
+        color: #fff !important;
+        z-index: 1 !important;
       }
       
       .intro--banner img {
         position: relative !important;
         top: auto !important;
         left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
         width: 200px !important;
         height: auto !important;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 20px auto !important;
         display: block !important;
-      }
-      
-      /* Fix work/sections */
-      .work {
         max-width: 100% !important;
-        padding: 20px 0;
       }
       
-      .work h2 {
-        font-size: 2rem !important;
-        margin-bottom: 30px !important;
-      }
-      
-      /* Fix scoreboard sections */
-      .scoreboard-who-we-are {
+      /* Fix all work/sections */
+      .work, .scoreboard-who-we-are, .scoreboard-services-minimal, .scoreboard-game-plan, .scoreboard-team, .scoreboard-contact {
+        width: 100% !important;
+        max-width: 100% !important;
         padding: 20px 15px !important;
-        max-width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
       }
       
-      .scoreboard-who-we-are h2 {
-        font-size: 1.8rem !important;
-        margin-bottom: 20px !important;
+      .work h2, .scoreboard-who-we-are h2, .scoreboard-services-minimal h2, .scoreboard-game-plan h2, .scoreboard-team h2, .scoreboard-contact h2 {
+        font-size: 2rem !important;
+        font-weight: 900 !important;
+        margin-bottom: 30px !important;
+        color: #fff !important;
+        text-align: center !important;
       }
       
-      .scoreboard-who-desc {
+      /* Fix all text elements */
+      .scoreboard-who-desc, .scoreboard-who-bullets p, .scoreboard-service-desc, .scoreboard-game-desc, .scoreboard-team-desc {
         font-size: 1rem !important;
         line-height: 1.6 !important;
         margin-bottom: 20px !important;
+        color: #fff !important;
+        text-align: left !important;
       }
       
       .scoreboard-who-bullets {
+        display: flex !important;
         flex-direction: column !important;
         gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
       
       .scoreboard-who-bullets > div {
+        width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
+        text-align: left !important;
       }
       
       .scoreboard-who-bullets p {
         font-size: 1rem !important;
         margin-bottom: 10px !important;
+        color: #fff !important;
+        display: flex !important;
+        align-items: flex-start !important;
+      }
+      
+      .scoreboard-check {
+        font-size: 1.2rem !important;
+        margin-right: 10px !important;
+        color: #fff !important;
       }
       
       /* Fix services section */
-      .scoreboard-services-minimal {
-        padding: 20px 15px !important;
-      }
-      
-      .scoreboard-services-minimal h2 {
-        font-size: 1.8rem !important;
-        margin-bottom: 30px !important;
-      }
-      
       .scoreboard-service-row {
+        display: flex !important;
         flex-direction: column !important;
         text-align: center !important;
         padding: 20px 10px !important;
         margin-bottom: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
       }
       
       .scoreboard-service-icon {
         margin-bottom: 15px !important;
+        display: flex !important;
+        justify-content: center !important;
       }
       
       .scoreboard-service-title {
         font-size: 1.2rem !important;
+        font-weight: 700 !important;
         margin-bottom: 10px !important;
+        color: #fff !important;
       }
       
       .scoreboard-service-desc {
         font-size: 1rem !important;
         line-height: 1.5 !important;
+        color: #fff !important;
       }
       
       /* Fix contact section */
       .contact {
         position: relative !important;
         height: auto !important;
-        min-height: 100vh;
+        min-height: 100vh !important;
+        background-size: cover !important;
+        background-position: center !important;
       }
       
       .contact--lockup {
+        width: 100% !important;
         max-width: 100% !important;
-        padding: 20px 15px;
+        padding: 20px 15px !important;
         justify-content: center !important;
+        align-items: center !important;
       }
       
       .contact--lockup .modal {
         padding: 30px 20px !important;
         width: 100% !important;
-        max-width: 400px;
+        max-width: 400px !important;
+        background-color: rgba(12, 12, 12, 0.95) !important;
       }
       
       /* Fix form elements */
+      .work-request {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
       .work-request input[type="text"],
       .work-request input[type="email"],
       .work-request textarea {
         font-size: 16px !important;
-        padding: 10px !important;
+        padding: 12px !important;
+        width: 100% !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 4px !important;
+        color: #fff !important;
       }
       
       .work-request input[type="submit"] {
@@ -163,32 +265,65 @@
         max-width: 300px !important;
         font-size: 16px !important;
         padding: 15px !important;
+        background-color: #8C1C13 !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
       }
       
       /* Fix footer */
-      .footer {
+      .scoreboard-footer {
         position: relative !important;
         padding: 20px 15px !important;
+        background-color: #0c0c0c !important;
+        color: #fff !important;
       }
       
       .footer-content {
+        display: flex !important;
         flex-direction: column !important;
         text-align: center !important;
         gap: 15px !important;
+        color: #fff !important;
       }
       
-      .footer-buttons {
-        flex-direction: column !important;
-        gap: 10px !important;
+      .footer-disclaimer p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        color: #fff !important;
       }
       
-      .footer-button {
-        width: 100% !important;
-        max-width: 200px !important;
-        margin: 0 auto !important;
+      .footer-links {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        flex-wrap: wrap !important;
+      }
+      
+      .footer-link {
+        color: #8C1C13 !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+      }
+      
+      .footer-copyright p {
+        font-size: 0.9rem !important;
+        color: #fff !important;
+      }
+      
+      /* Hide sidebar navigation on mobile */
+      .l-side-nav {
+        display: none !important;
+      }
+      
+      /* Show mobile navigation */
+      .mobile-nav {
+        display: block !important;
       }
     }
     
+    /* Extra small devices */
     @media (max-width: 480px) {
       .intro--banner h1 {
         font-size: 2rem !important;
@@ -198,47 +333,33 @@
         width: 150px !important;
       }
       
-      .work h2,
-      .scoreboard-who-we-are h2,
-      .scoreboard-services-minimal h2 {
+      .work h2, .scoreboard-who-we-are h2, .scoreboard-services-minimal h2, .scoreboard-game-plan h2, .scoreboard-team h2, .scoreboard-contact h2 {
         font-size: 1.5rem !important;
       }
       
-      .scoreboard-who-desc,
-      .scoreboard-who-bullets p,
-      .scoreboard-service-desc {
+      .scoreboard-who-desc, .scoreboard-who-bullets p, .scoreboard-service-desc, .scoreboard-game-desc, .scoreboard-team-desc {
         font-size: 0.95rem !important;
       }
       
       .scoreboard-service-title {
         font-size: 1.1rem !important;
       }
+      
+      .scoreboard-who-we-are, .scoreboard-services-minimal, .scoreboard-game-plan, .scoreboard-team, .scoreboard-contact {
+        padding: 15px 10px !important;
+      }
     }
     
-    /* Ensure text is always visible */
+    /* Ensure all text is visible */
     * {
       color: inherit !important;
     }
     
-    /* Fix any hidden elements */
+    /* Force visibility for active sections */
     .section--is-active {
       opacity: 1 !important;
       visibility: visible !important;
-    }
-    
-    /* Ensure proper contrast */
-    body {
-      background-color: #0c0c0c !important;
-      color: #fff !important;
-    }
-    
-    /* Fix any overflow issues */
-    .l-viewport {
-      overflow-x: hidden !important;
-    }
-    
-    .container {
-      overflow-x: hidden !important;
+      display: block !important;
     }
     
     /* Mobile Navigation Styles */
