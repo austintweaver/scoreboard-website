@@ -699,55 +699,35 @@
     }
 
     @media (max-width: 700px) {
-      .intro--banner {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        height: auto !important;
-        min-height: 180px !important;
-        position: static !important;
-        padding: 32px 10vw 20px 10vw !important;
-        gap: 18px !important;
-      }
       .intro--banner img, .intro-logo {
-        position: static !important;
-        width: 38vw !important;
-        max-width: 180px !important;
-        min-width: 120px !important;
-        height: auto !important;
-        margin: 0 !important;
+        display: none !important;
+      }
+      .intro--banner {
         display: block !important;
-        flex-shrink: 0 !important;
+        padding: 32px 8vw 20px 8vw !important;
+        min-height: 120px !important;
+        gap: 0 !important;
       }
       .intro--banner h1, .intro-title {
-        position: static !important;
         text-align: right !important;
-        font-size: 2.1rem !important;
-        margin: 0 0 0 auto !important;
-        width: 52vw !important;
-        max-width: 60vw !important;
-        line-height: 1.1 !important;
+        font-size: 2.3rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
         font-weight: 900 !important;
+        line-height: 1.1 !important;
         letter-spacing: 0.5px !important;
         color: #fff !important;
       }
     }
     @media (max-width: 480px) {
-      .intro--banner {
-        min-height: 120px !important;
-        padding: 18px 4vw 10px 4vw !important;
-        gap: 10px !important;
-      }
-      .intro--banner img, .intro-logo {
-        width: 32vw !important;
-        max-width: 110px !important;
-        min-width: 70px !important;
-      }
       .intro--banner h1, .intro-title {
-        font-size: 1.2rem !important;
-        width: 60vw !important;
-        max-width: 70vw !important;
+        font-size: 1.3rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .intro--banner {
+        padding: 18px 4vw 10px 4vw !important;
       }
     }
     .scoreboard-services-carousel,
