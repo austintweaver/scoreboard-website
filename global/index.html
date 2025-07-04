@@ -783,183 +783,230 @@
             </style>
           </li>
           <li class="l-section section">
-            <div class="scoreboard-services-minimal">
+            <div class="scoreboard-services-carousel">
               <h2>What We Do</h2>
-              <div class="scoreboard-services-list">
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">Fractional General Counsel</span>
-                    <span class="scoreboard-service-desc">Expert legal guidance and strategic counsel for your organization on a flexible, as-needed basis.</span>
-                  </span>
+              <div class="carousel-container">
+                <button class="carousel-arrow left" id="services-arrow-left" aria-label="Previous Service">&#8592;</button>
+                <div class="carousel-track" id="services-carousel-track">
+                  <!-- Slides will be injected by JS -->
                 </div>
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">Fractional COO</span>
-                    <span class="scoreboard-service-desc">Experienced operational leadership to optimize your organization's efficiency and performance.</span>
-                  </span>
-                </div>
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">Strategy Consulting</span>
-                    <span class="scoreboard-service-desc">Comprehensive strategic planning and execution support to achieve your organizational goals.</span>
-                  </span>
-                </div>
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">Revenue Strategy</span>
-                    <span class="scoreboard-service-desc">Data-driven approaches to optimize revenue streams and maximize financial performance.</span>
-                  </span>
-                </div>
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M12 19v-6"/><path d="M9 19h6"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">Start-up Advising</span>
-                    <span class="scoreboard-service-desc">Specialized guidance for emerging organizations to navigate growth and development challenges.</span>
-                  </span>
-                </div>
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">Team Business Operations</span>
-                    <span class="scoreboard-service-desc">Tailored solutions for sports teams to enhance operations and business performance.</span>
-                  </span>
-                </div>
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">Crisis Management</span>
-                    <span class="scoreboard-service-desc">Strategic support for managing critical situations and conducting thorough investigations.</span>
-                  </span>
-                </div>
-                <div class="scoreboard-service-row" tabindex="0">
-                  <span class="scoreboard-service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/><path d="M17 11v2a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-2"/></svg>
-                  </span>
-                  <span class="scoreboard-service-content">
-                    <span class="scoreboard-service-title">HR Strategy &amp; Management</span>
-                    <span class="scoreboard-service-desc">Comprehensive human resources solutions to build and maintain high-performing teams.</span>
-                  </span>
-                </div>
+                <button class="carousel-arrow right" id="services-arrow-right" aria-label="Next Service">&#8594;</button>
+              </div>
+              <div class="carousel-details" id="services-carousel-details">
+                <!-- Title and description will be injected by JS -->
               </div>
             </div>
             <style>
-              .scoreboard-services-minimal {
+              .scoreboard-services-carousel {
                 max-width: 900px;
                 margin: 0 auto;
                 padding: 100px 8px 56px 8px;
                 color: #fff;
                 text-align: center;
               }
-              .scoreboard-services-minimal h2 {
+              .scoreboard-services-carousel h2 {
                 font-size: 2.1rem;
                 font-weight: 900;
                 margin-bottom: 28px;
               }
-              .scoreboard-services-list {
-                display: flex;
-                flex-direction: column;
-                gap: 28px;
-                align-items: stretch;
-              }
-              .scoreboard-service-row {
-                display: flex;
-                align-items: flex-start;
-                gap: 22px;
-                text-align: left;
-                cursor: pointer;
-                outline: none;
-              }
-              .scoreboard-service-row:focus {
-                box-shadow: 0 0 0 2px #8C1C13;
-                border-radius: 6px;
-              }
-              .scoreboard-service-icon {
-                flex-shrink: 0;
+              .carousel-container {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 38px;
-                height: 38px;
-                margin-top: 2px;
+                gap: 24px;
+                position: relative;
+                margin-bottom: 32px;
               }
-              .scoreboard-service-content {
+              .carousel-arrow {
+                background: #222;
+                color: #fff;
+                border: none;
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: opacity 0.2s;
+                z-index: 2;
+              }
+              .carousel-arrow:hover {
+                opacity: 1;
+              }
+              .carousel-track {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                width: 600px;
+                max-width: 90vw;
+                overflow: hidden;
+                position: relative;
+                min-height: 260px;
+              }
+              .carousel-slide {
                 display: flex;
                 flex-direction: column;
-                gap: 2px;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.4s cubic-bezier(.4,0,.2,1), filter 0.4s, opacity 0.4s;
+                opacity: 0.6;
+                filter: blur(1px) grayscale(40%);
+                cursor: pointer;
+                z-index: 1;
               }
-              .scoreboard-service-title {
+              .carousel-slide.center {
+                transform: scale(1.25);
+                opacity: 1;
+                filter: none;
+                z-index: 2;
+              }
+              .carousel-slide .carousel-icon {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                background: #181818;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+                overflow: hidden;
+              }
+              .carousel-slide.center .carousel-icon {
+                border: 4px solid #fff;
+                background: #222;
+              }
+              .carousel-slide svg {
+                width: 64px;
+                height: 64px;
+                stroke: #fff;
+              }
+              .carousel-slide .carousel-title {
+                margin-top: 8px;
                 font-size: 1.08rem;
                 font-weight: 700;
-                margin-bottom: 2px;
                 color: #fff;
+                text-align: center;
+                letter-spacing: 0.5px;
               }
-              .scoreboard-service-desc {
-                font-size: 0.97rem;
+              .carousel-details {
+                margin-top: 18px;
+                min-height: 60px;
+              }
+              .carousel-details .carousel-title {
+                font-size: 1.2rem;
+                font-weight: 900;
+                margin-bottom: 8px;
+                color: #fff;
+                text-align: center;
+              }
+              .carousel-details .carousel-desc {
+                font-size: 1rem;
                 color: #e0e0e0;
-                line-height: 1.5;
-                max-height: 0;
-                opacity: 0;
-                overflow: hidden;
-                transition: max-height 0.3s cubic-bezier(.4,0,.2,1), opacity 0.2s;
-                pointer-events: none;
-              }
-              .scoreboard-service-row:hover .scoreboard-service-desc,
-              .scoreboard-service-row:focus .scoreboard-service-desc {
-                max-height: 200px;
-                opacity: 1;
-                pointer-events: auto;
-                margin-top: 4px;
+                text-align: center;
+                max-width: 500px;
+                margin: 0 auto;
               }
               @media (max-width: 700px) {
-                .scoreboard-services-minimal {
-                  padding: 12px 2vw 18px 2vw;
+                .scoreboard-services-carousel {
+                  padding: 24px 2vw 18px 2vw;
                 }
-                .scoreboard-services-list {
-                  gap: 18px;
+                .carousel-track {
+                  width: 98vw;
+                  gap: 12vw;
+                  min-height: 160px;
                 }
-                .scoreboard-service-row {
-                  gap: 12px;
+                .carousel-slide .carousel-icon {
+                  width: 80px;
+                  height: 80px;
                 }
-                .scoreboard-service-title {
-                  font-size: 1rem;
+                .carousel-slide svg {
+                  width: 36px;
+                  height: 36px;
                 }
-                .scoreboard-service-desc {
-                  font-size: 0.91rem;
-                }
-                .scoreboard-service-icon {
-                  width: 28px;
-                  height: 28px;
-                }
-              }
-              @media (max-width: 500px) {
-                .scoreboard-service-row {
-                  flex-direction: column;
-                  align-items: flex-start;
-                  gap: 6px;
-                }
-                .scoreboard-service-icon {
-                  margin-top: 0;
+                .carousel-arrow {
+                  width: 38px;
+                  height: 38px;
+                  font-size: 1.5rem;
                 }
               }
             </style>
+            <script>
+            // Service data (from your original HTML)
+            const servicesData = [
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/></svg>`,
+                title: "Fractional General Counsel",
+                desc: "Expert legal guidance and strategic counsel for your organization on a flexible, as-needed basis."
+              },
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/></svg>`,
+                title: "Fractional COO",
+                desc: "Experienced operational leadership to optimize your organization's efficiency and performance."
+              },
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>`,
+                title: "Strategy Consulting",
+                desc: "Comprehensive strategic planning and execution support to achieve your organizational goals."
+              },
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>`,
+                title: "Revenue Strategy",
+                desc: "Data-driven approaches to optimize revenue streams and maximize financial performance."
+              },
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M12 19v-6"/><path d="M9 19h6"/></svg>`,
+                title: "Start-up Advising",
+                desc: "Specialized guidance for emerging organizations to navigate growth and development challenges."
+              },
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/></svg>`,
+                title: "Team Business Operations",
+                desc: "Tailored solutions for sports teams to enhance operations and business performance."
+              },
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
+                title: "Crisis Management",
+                desc: "Strategic support for managing critical situations and conducting thorough investigations."
+              },
+              {
+                icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/><path d="M17 11v2a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-2"/></svg>`,
+                title: "HR Strategy & Management",
+                desc: "Comprehensive human resources solutions to build and maintain high-performing teams."
+              }
+            ];
+            let currentIndex = 0;
+            function renderCarousel() {
+              const track = document.getElementById('services-carousel-track');
+              const details = document.getElementById('services-carousel-details');
+              track.innerHTML = '';
+              // Show 3 slides: prev, center, next
+              const prev = (currentIndex - 1 + servicesData.length) % servicesData.length;
+              const next = (currentIndex + 1) % servicesData.length;
+              [prev, currentIndex, next].forEach((idx, i) => {
+                const slide = document.createElement('div');
+                slide.className = 'carousel-slide' + (idx === currentIndex ? ' center' : '');
+                slide.innerHTML = `<div class='carousel-icon'>${servicesData[idx].icon}</div><div class='carousel-title'>${servicesData[idx].title}</div>`;
+                track.appendChild(slide);
+              });
+              // Details for center
+              details.innerHTML = `<div class='carousel-title'>${servicesData[currentIndex].title}</div><div class='carousel-desc'>${servicesData[currentIndex].desc}</div>`;
+            }
+            document.getElementById('services-arrow-left').onclick = function() {
+              currentIndex = (currentIndex - 1 + servicesData.length) % servicesData.length;
+              renderCarousel();
+            };
+            document.getElementById('services-arrow-right').onclick = function() {
+              currentIndex = (currentIndex + 1) % servicesData.length;
+              renderCarousel();
+            };
+            // Initial render
+            renderCarousel();
+            </script>
           </li>
           <li class="l-section section">
             <div class="scoreboard-gameplan">
