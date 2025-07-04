@@ -751,7 +751,7 @@
     .scoreboard-gameplan-carousel,
     .team-section,
     .contact {
-      padding-top: 120px !important;
+      padding-top: 70px !important;
     }
     @media (max-width: 900px) {
       .scoreboard-services-carousel,
@@ -759,7 +759,7 @@
       .scoreboard-gameplan-carousel,
       .team-section,
       .contact {
-        padding-top: 90px !important;
+        padding-top: 50px !important;
       }
     }
     @media (max-width: 600px) {
@@ -768,7 +768,7 @@
       .scoreboard-gameplan-carousel,
       .team-section,
       .contact {
-        padding-top: 70px !important;
+        padding-top: 30px !important;
       }
     }
     .header {
@@ -780,7 +780,39 @@
       background: transparent !important;
     }
     .l-main-content {
-      margin-top: 70px !important;
+      margin-top: 60px !important;
+    }
+    @media (max-width: 700px) {
+      .intro-logo {
+        width: 200px !important;
+        max-width: 60vw !important;
+        left: 0 !important;
+        top: 30px !important;
+        position: absolute !important;
+      }
+      .intro-title {
+        font-size: 2.5rem !important;
+        text-align: right !important;
+        right: 0 !important;
+        left: auto !important;
+        top: 40px !important;
+        position: absolute !important;
+        width: 60vw !important;
+        max-width: 60vw !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .intro-logo {
+        width: 140px !important;
+        max-width: 45vw !important;
+        top: 24px !important;
+      }
+      .intro-title {
+        font-size: 1.5rem !important;
+        top: 32px !important;
+        width: 55vw !important;
+        max-width: 55vw !important;
+      }
     }
   </style>
 </head>
@@ -870,8 +902,8 @@
                     content: "06" !important;
                   }
                 </style>
-                <img src="assets/img/scoreboard-logo-white.png" alt="Scoreboard Logo" style="position: absolute; top: 20px; left: -12px; width: 400px; height: auto; max-width: 100%;">
-                <h1 style="position: absolute; right: 0; top: 50px; text-align: right;">Win.<br>Where It<br>Matters Most.</h1>
+                <img src="assets/img/scoreboard-logo-white.png" alt="Scoreboard Logo" style="position: absolute; top: 20px; left: -12px; width: 400px; height: auto; max-width: 100%;" class="intro-logo">
+                <h1 style="position: absolute; right: 0; top: 50px; text-align: right;" class="intro-title">Win.<br>Where It<br>Matters Most.</h1>
               </div>
 
             </div>
@@ -903,12 +935,12 @@
               .scoreboard-who-we-are h2 {
                 font-size: 2.1rem;
                 font-weight: 900;
-                margin-bottom: 18px;
+                margin-bottom: 12px;
               }
               .scoreboard-who-sub {
                 font-size: 1.18rem;
                 color: #e0e0e0;
-                margin-bottom: 32px;
+                margin-bottom: 16px;
                 font-weight: 400;
                 max-width: 800px;
                 margin-left: auto;
@@ -917,14 +949,14 @@
               .scoreboard-who-desc {
                 font-size: 1.08rem;
                 line-height: 1.6;
-                margin-bottom: 28px;
+                margin-bottom: 14px;
               }
               .scoreboard-who-bullets {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 24px;
-                margin-bottom: 28px;
+                margin-bottom: 10px;
               }
               .scoreboard-who-bullets > div {
                 flex: 1 1 320px;
