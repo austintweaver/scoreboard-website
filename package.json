@@ -1,0 +1,10 @@
+{
+  "name": "scoreboard-website",
+  "version": "1.0.0",
+  "description": "Scoreboard Strategy website",
+  "scripts": {
+    "build": "echo 'Static site - no build required'"
+  },
+  "author": "Austin Weaver",
+  "license": "MIT"
+} 
