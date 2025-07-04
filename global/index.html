@@ -655,12 +655,13 @@
     
     .mobile-nav-menu li {
       padding: 15px 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
       color: #fff;
       cursor: pointer;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       transition: color 0.3s ease;
+      white-space: nowrap;
     }
     
     .mobile-nav-menu li:last-child {
@@ -674,6 +675,26 @@
     @media (max-width: 768px) {
       .mobile-nav {
         display: block;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .mobile-nav-menu li {
+        font-size: 0.9rem;
+        padding: 12px 0;
+      }
+      .mobile-nav-content {
+        max-width: 280px;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .mobile-nav-menu li {
+        font-size: 0.85rem;
+        padding: 10px 0;
+      }
+      .mobile-nav-content {
+        max-width: 260px;
       }
     }
 
@@ -822,6 +843,7 @@
           <li class="l-section section">
             <div class="work scoreboard-who-we-are">
               <h2>What We Do</h2>
+              <div class="scoreboard-who-sub">From optimizing operations to guiding growth initiatives, we provide tailored solutions that meet clients where they are and deliver winning results.</div>
               <p class="scoreboard-who-desc">Scoreboard Strategy delivers fractional business consulting designed to help athletes, entertainers, executives, and organizations operate more efficiently, scale with confidence, and make smarter decisions. Our subscription-based model provides access to high-level strategic support—without the cost or commitment of a full-time hire.</p>
               <div class="scoreboard-who-bullets">
                 <div>
@@ -845,7 +867,16 @@
               .scoreboard-who-we-are h2 {
                 font-size: 2.1rem;
                 font-weight: 900;
-                margin-bottom: 28px;
+                margin-bottom: 18px;
+              }
+              .scoreboard-who-sub {
+                font-size: 1.18rem;
+                color: #e0e0e0;
+                margin-bottom: 32px;
+                font-weight: 400;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
               }
               .scoreboard-who-desc {
                 font-size: 1.08rem;
@@ -897,6 +928,9 @@
                 .scoreboard-who-we-are h2 {
                   font-size: 2rem;
                 }
+                .scoreboard-who-sub {
+                  font-size: 1rem;
+                }
                 .scoreboard-who-desc {
                   font-size: 1rem;
                 }
@@ -907,6 +941,9 @@
                 }
                 .scoreboard-who-we-are h2 {
                   font-size: 1.3rem;
+                }
+                .scoreboard-who-sub {
+                  font-size: 0.95rem;
                 }
                 .scoreboard-who-desc {
                   font-size: 0.95rem;
@@ -1062,6 +1099,9 @@
                 .scoreboard-services-carousel {
                   padding: 40px 4vw 30px 4vw;
                 }
+                .scoreboard-services-carousel h2 {
+                  font-size: 2rem;
+                }
                 .carousel-track {
                   width: 90vw;
                   gap: 8vw;
@@ -1085,6 +1125,11 @@
                 }
                 .carousel-details .carousel-desc {
                   font-size: 0.95rem;
+                }
+              }
+              @media (max-width: 600px) {
+                .scoreboard-services-carousel h2 {
+                  font-size: 1.3rem;
                 }
               }
             </style>
@@ -1159,6 +1204,36 @@
             };
             // Initial render
             renderCarousel();
+            
+            // Add swipe functionality for mobile
+            let startX = 0;
+            let endX = 0;
+            const track = document.getElementById('services-carousel-track');
+            
+            track.addEventListener('touchstart', function(e) {
+              startX = e.touches[0].clientX;
+            }, false);
+            
+            track.addEventListener('touchend', function(e) {
+              endX = e.changedTouches[0].clientX;
+              handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+              const swipeThreshold = 50;
+              const diff = startX - endX;
+              
+              if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                  // Swipe left - next
+                  currentIndex = (currentIndex + 1) % servicesData.length;
+                } else {
+                  // Swipe right - previous
+                  currentIndex = (currentIndex - 1 + servicesData.length) % servicesData.length;
+                }
+                renderCarousel();
+              }
+            }
             </script>
           </li>
           <li class="l-section section">
@@ -1313,6 +1388,9 @@
                 .scoreboard-gameplan-carousel {
                   padding: 40px 4vw 30px 4vw;
                 }
+                .scoreboard-gameplan-carousel h2 {
+                  font-size: 2rem;
+                }
                 .carousel-track {
                   width: 90vw;
                   gap: 8vw;
@@ -1336,6 +1414,11 @@
                 }
                 .carousel-details .carousel-desc {
                   font-size: 0.95rem;
+                }
+              }
+              @media (max-width: 600px) {
+                .scoreboard-gameplan-carousel h2 {
+                  font-size: 1.3rem;
                 }
               }
             </style>
@@ -1390,6 +1473,37 @@
             };
             // Initial render
             renderGameplanCarousel();
+            
+            // Add swipe functionality for mobile
+            let gameplanStartX = 0;
+            let gameplanEndX = 0;
+            const gameplanTrack = document.getElementById('gameplan-carousel-track');
+            
+            gameplanTrack.addEventListener('touchstart', function(e) {
+              gameplanStartX = e.touches[0].clientX;
+            }, false);
+            
+            gameplanTrack.addEventListener('touchend', function(e) {
+              gameplanEndX = e.changedTouches[0].clientX;
+              handleGameplanSwipe();
+            }, false);
+            
+            function handleGameplanSwipe() {
+              const swipeThreshold = 50;
+              const diff = gameplanStartX - gameplanEndX;
+              
+              if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                  // Swipe left - next
+                  gameplanIndex = (gameplanIndex + 1) % gameplanData.length;
+                } else {
+                  // Swipe right - previous
+                  gameplanIndex = (gameplanIndex - 1 + gameplanData.length) % gameplanData.length;
+                }
+                renderGameplanCarousel();
+              }
+            }
+            
             // Shared arrow key navigation for both carousels
             document.addEventListener('keydown', function(e) {
               if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
@@ -1420,7 +1534,7 @@
                   .team-section {
                     flex-direction: column !important;
                     align-items: center !important;
-                    padding: 60px 20px 40px 20px !important;
+                    padding: 100px 20px 40px 20px !important;
                     text-align: center !important;
                   }
                   .team-image {
@@ -1453,7 +1567,7 @@
                 }
                 @media (max-width: 480px) {
                   .team-section {
-                    padding: 40px 15px 30px 15px !important;
+                    padding: 80px 15px 30px 15px !important;
                   }
                   .team-image img {
                     width: 240px !important;
@@ -1577,20 +1691,25 @@
               }
               @media (max-width: 700px) {
                 .scoreboard-contact {
-                  padding: 60px 2vw 40px 2vw;
+                  padding: 40px 4vw 30px 4vw;
                 }
                 .scoreboard-contact-container {
                   grid-template-columns: 1fr;
                   gap: 40px;
                 }
                 .scoreboard-contact h2 {
-                  font-size: 1.8rem;
+                  font-size: 2rem;
                 }
                 .scoreboard-contact-sub {
                   font-size: 1rem;
                 }
                 .scoreboard-contact-item {
                   margin-bottom: 24px;
+                }
+              }
+              @media (max-width: 600px) {
+                .scoreboard-contact h2 {
+                  font-size: 1.3rem;
                 }
               }
               
