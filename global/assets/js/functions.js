@@ -91,15 +91,13 @@ $( document ).ready(function() {
         nextPos = 0;
 
     if (param.type === "swipeup" || param.keyCode === 40 || param > 0) {
+      // Going forward - only allow if not at the last section
       if (curPos !== lastItem) {
         nextPos = curPos + 1;
         updateNavs(nextPos);
         updateContent(curPos, nextPos, lastItem);
       }
-      else {
-        updateNavs(nextPos);
-        updateContent(curPos, nextPos, lastItem);
-      }
+      // Removed the else clause that would cycle back to first section
     }
     else if (param.type === "swipedown" || param.keyCode === 38 || param < 0){
       if (curPos !== 0){

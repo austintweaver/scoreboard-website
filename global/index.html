@@ -515,6 +515,9 @@
                   <button type="submit" class="scoreboard-submit-btn">Submit</button>
                 </form>
               </div>
+              
+              <!-- Footer -->
+
             </div>
             <style>
               .scoreboard-contact {
@@ -604,6 +607,168 @@
                   margin-bottom: 24px;
                 }
               }
+              
+              /* Footer Styles */
+              .scoreboard-footer {
+                background: rgba(0, 0, 0, 0.9);
+                color: #fff;
+                padding: 40px 0 20px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                margin-top: 40px;
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+              }
+              
+              .scoreboard-footer.show {
+                display: block;
+                opacity: 1;
+              }
+              
+              .footer-content {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                text-align: center;
+              }
+              
+              .footer-disclaimer {
+                margin-bottom: 15px;
+              }
+              
+              .footer-disclaimer p {
+                font-size: 0.85rem;
+                color: #ccc;
+                line-height: 1.4;
+                margin: 0;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              
+              .footer-links {
+                margin-bottom: 10px;
+              }
+              
+              .footer-link {
+                color: #8C1C13;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: color 0.2s;
+              }
+              
+              .footer-link:hover {
+                color: #fff;
+                text-decoration: underline;
+              }
+              
+              .footer-separator {
+                color: #666;
+                margin: 0 10px;
+                font-size: 0.9rem;
+              }
+              
+              .footer-copyright {
+                margin-top: 10px;
+              }
+              
+              .footer-copyright p {
+                font-size: 0.8rem;
+                color: #999;
+                margin: 0;
+              }
+              
+              /* Modal Styles */
+              .modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 2000;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+              }
+              
+              .modal-content {
+                background: #1a1a1a;
+                color: #fff;
+                padding: 40px;
+                border-radius: 10px;
+                max-width: 600px;
+                max-height: 80vh;
+                overflow-y: auto;
+                position: relative;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              }
+              
+              .modal-close {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              
+              .modal-close:hover {
+                color: #8C1C13;
+              }
+              
+              .modal-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: #8C1C13;
+              }
+              
+              .modal-body {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #e0e0e0;
+              }
+              
+              .modal-body h3 {
+                color: #fff;
+                margin-top: 25px;
+                margin-bottom: 10px;
+                font-size: 1.1rem;
+              }
+              
+              .modal-body p {
+                margin-bottom: 15px;
+              }
+              
+              @media (max-width: 768px) {
+                .scoreboard-footer {
+                  padding: 15px 0;
+                }
+                
+                .footer-content {
+                  padding: 0 15px;
+                }
+                
+                .footer-disclaimer p {
+                  font-size: 0.8rem;
+                }
+                
+                .modal-content {
+                  padding: 30px 20px;
+                  margin: 10px;
+                }
+              }
             </style>
           </li>
           <li class="l-section section">
@@ -636,6 +801,78 @@
     <li>Team</li>
     <li>Contact</li>
   </ul>
+  
+  <!-- Global Footer -->
+  <footer class="scoreboard-footer">
+    <div class="footer-content">
+      <div class="footer-disclaimer">
+        <p>Scoreboard Strategy LLC is not a law firm and does not provide legal advice. This is not attorney advertising. Any legal services are provided independently by licensed attorneys and require a separate engagement. Clients are strongly encouraged to seek the advice of qualified legal counsel licensed in their jurisdiction for legal matters.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" class="footer-link" onclick="showPrivacyPolicy(); return false;">Privacy Policy</a>
+        <span class="footer-separator">|</span>
+        <a href="#" class="footer-link" onclick="showTermsOfUse(); return false;">Terms of Use</a>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Scoreboard Strategy LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Privacy Policy Modal -->
+  <div id="privacy-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('privacy-modal')">&times;</button>
+      <h2 class="modal-title">Privacy Policy</h2>
+      <div class="modal-body">
+        <p><strong>Last updated: January 2024</strong></p>
+        
+        <h3>Information We Collect</h3>
+        <p>We collect information you provide directly to us, such as when you fill out our contact form, including your name, email address, company name, and any messages you send us.</p>
+        
+        <h3>How We Use Your Information</h3>
+        <p>We use the information we collect to respond to your inquiries, provide consulting services, and improve our website and services.</p>
+        
+        <h3>Information Sharing</h3>
+        <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as required by law.</p>
+        
+        <h3>Data Security</h3>
+        <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+        
+        <h3>Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy, please contact us through our website.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Terms of Use Modal -->
+  <div id="terms-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('terms-modal')">&times;</button>
+      <h2 class="modal-title">Terms of Use</h2>
+      <div class="modal-body">
+        <p><strong>Last updated: January 2024</strong></p>
+        
+        <h3>Acceptance of Terms</h3>
+        <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
+        
+        <h3>Use License</h3>
+        <p>Permission is granted to temporarily download one copy of the materials on Scoreboard Strategy's website for personal, non-commercial transitory viewing only.</p>
+        
+        <h3>Disclaimer</h3>
+        <p>The materials on Scoreboard Strategy's website are provided on an 'as is' basis. Scoreboard Strategy makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+        
+        <h3>Limitations</h3>
+        <p>In no event shall Scoreboard Strategy or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Scoreboard Strategy's website.</p>
+        
+        <h3>Revisions and Errata</h3>
+        <p>The materials appearing on Scoreboard Strategy's website could include technical, typographical, or photographic errors. Scoreboard Strategy does not warrant that any of the materials on its website are accurate, complete, or current.</p>
+        
+        <h3>Contact Information</h3>
+        <p>If you have any questions about these Terms of Use, please contact us through our website.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -658,6 +895,104 @@ function goToHome() {
   // Scroll to top
   $('html, body').animate({scrollTop: 0}, 500);
 }
+
+// Modal functions
+function showPrivacyPolicy() {
+  document.getElementById('privacy-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function showTermsOfUse() {
+  document.getElementById('terms-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal-overlay')) {
+    event.target.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    const modals = document.querySelectorAll('.modal-overlay');
+    modals.forEach(modal => {
+      if (modal.style.display === 'flex') {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
+});
+
+// Footer visibility control
+function updateFooterVisibility() {
+  const footer = document.querySelector('.scoreboard-footer');
+  
+  // Check if the contact section (the one with the contact form) is active
+  const contactSection = document.querySelector('.l-section .scoreboard-contact');
+  const isContactActive = contactSection && contactSection.closest('.l-section').classList.contains('section--is-active');
+  
+  // Also check the outer navigation to see if "Contact" is active
+  const contactNav = document.querySelector('.outer-nav li:last-child');
+  const isContactNavActive = contactNav && contactNav.classList.contains('is-active');
+  
+  if (isContactActive || isContactNavActive) {
+    footer.classList.add('show');
+  } else {
+    footer.classList.remove('show');
+  }
+}
+
+// Check footer visibility on page load
+document.addEventListener('DOMContentLoaded', updateFooterVisibility);
+
+// Check footer visibility when sections change
+$(document).ready(function() {
+  // Initial check
+  setTimeout(updateFooterVisibility, 100);
+  
+  // Check more frequently
+  setInterval(updateFooterVisibility, 500);
+  
+  // Monitor for section changes
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        updateFooterVisibility();
+      }
+    });
+  });
+  
+  // Observe all section elements
+  const sections = document.querySelectorAll('.l-section');
+  sections.forEach(function(section) {
+    observer.observe(section, { attributes: true });
+  });
+  
+  // Also observe navigation elements
+  const navElements = document.querySelectorAll('.outer-nav li, .side-nav li');
+  navElements.forEach(function(nav) {
+    observer.observe(nav, { attributes: true });
+  });
+});
+
+// Also check when navigation is clicked
+$(document).on('click', '.side-nav li, .outer-nav li', function() {
+  setTimeout(updateFooterVisibility, 200);
+});
+
+// Check on window focus (in case user navigates with browser back/forward)
+window.addEventListener('focus', updateFooterVisibility);
+
 </script>
 </body>
 </html>
