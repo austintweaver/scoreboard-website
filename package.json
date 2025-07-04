@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Scoreboard Strategy website",
   "scripts": {
-    "build": "echo 'Static site - no build required'"
+    "build": "mkdir -p dist && cp -r global/* dist/"
   },
   "author": "Austin Weaver",
   "license": "MIT"
