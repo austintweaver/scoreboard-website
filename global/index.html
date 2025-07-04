@@ -29,12 +29,11 @@
     
     /* Mobile breakpoint - apply to all mobile devices */
     @media (max-width: 768px) {
-      /* Reset viewport and container */
+      /* Fix viewport and container - but preserve scrolling */
       .l-viewport {
         width: 100% !important;
-        height: auto !important;
-        min-height: 100vh !important;
-        overflow-x: hidden !important;
+        height: 100vh !important;
+        overflow: hidden !important;
       }
       
       .l-wrapper {
@@ -49,24 +48,23 @@
         max-width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
-        overflow-x: hidden !important;
       }
       
-      /* Fix all sections */
+      /* Fix all sections - but preserve scroll behavior */
       .l-section {
-        position: relative !important;
+        position: absolute !important;
         width: 100% !important;
-        height: auto !important;
-        min-height: 100vh !important;
-        padding: 20px 0 !important;
-        opacity: 1 !important;
-        visibility: visible !important;
+        height: 100% !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity .4s ease-in-out, visibility 0s .4s !important;
       }
       
       .section--is-active {
         opacity: 1 !important;
         visibility: visible !important;
         z-index: 1 !important;
+        transition: opacity .4s ease-in-out .4s !important;
       }
       
       /* Fix intro section */
@@ -220,9 +218,11 @@
       
       /* Fix contact section */
       .contact {
-        position: relative !important;
-        height: auto !important;
-        min-height: 100vh !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
         background-size: cover !important;
         background-position: center !important;
       }
@@ -353,13 +353,6 @@
     /* Ensure all text is visible */
     * {
       color: inherit !important;
-    }
-    
-    /* Force visibility for active sections */
-    .section--is-active {
-      opacity: 1 !important;
-      visibility: visible !important;
-      display: block !important;
     }
     
     /* Mobile Navigation Styles */
