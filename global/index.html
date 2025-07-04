@@ -608,6 +608,35 @@
         display: block;
       }
     }
+
+    @media (max-width: 700px) {
+      .intro--banner {
+        height: auto !important;
+        min-height: 180px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: static !important;
+        padding: 32px 0 16px 0 !important;
+      }
+      .intro--banner img {
+        position: static !important;
+        width: 140px !important;
+        max-width: 80vw !important;
+        margin: 0 auto 18px auto !important;
+        display: block !important;
+      }
+      .intro--banner h1 {
+        position: static !important;
+        text-align: center !important;
+        font-size: 2rem !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        line-height: 1.2 !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -784,7 +813,7 @@
           </li>
           <li class="l-section section">
             <div class="scoreboard-services-carousel">
-              <h2>What We Do</h2>
+              <h2>Services</h2>
               <div class="carousel-container">
                 <button class="carousel-arrow left" id="services-arrow-left" aria-label="Previous Service">&#8592;</button>
                 <div class="carousel-track" id="services-carousel-track">
@@ -917,16 +946,20 @@
                 }
                 .carousel-track {
                   width: 98vw;
-                  gap: 12vw;
-                  min-height: 160px;
+                  gap: 6vw;
+                  min-height: 120px;
                 }
                 .carousel-slide .carousel-icon {
-                  width: 80px;
-                  height: 80px;
+                  width: 70px;
+                  height: 70px;
+                  min-width: 70px;
+                  min-height: 70px;
+                  max-width: 80px;
+                  max-height: 80px;
                 }
                 .carousel-slide svg {
-                  width: 36px;
-                  height: 36px;
+                  width: 32px;
+                  height: 32px;
                 }
                 .carousel-arrow {
                   width: 38px;
@@ -1009,155 +1042,245 @@
             </script>
           </li>
           <li class="l-section section">
-            <div class="scoreboard-gameplan">
-              <h2>The GAME Plan</h2>
+            <div class="scoreboard-gameplan-carousel">
+              <h2>GAME Plan</h2>
               <div class="scoreboard-gameplan-sub">Subscription-based support for athletes, coaches, administrators, entertainers and creators. No commissions, just outcomes.</div>
-              <div class="scoreboard-gameplan-grid">
-                <div class="scoreboard-gameplan-item">
-                  <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
-                  </span>
-                  <div class="scoreboard-gameplan-content">
-                    <div class="scoreboard-gameplan-title">Guidance</div>
-                    <div class="scoreboard-gameplan-desc">Expert advice to help navigate your journey</div>
-                  </div>
+              <div class="carousel-container">
+                <button class="carousel-arrow left" id="gameplan-arrow-left" aria-label="Previous Game Plan">&#8592;</button>
+                <div class="carousel-track" id="gameplan-carousel-track">
+                  <!-- Slides will be injected by JS -->
                 </div>
-                <div class="scoreboard-gameplan-item">
-                  <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M21 15v-2a2 2 0 0 0-2-2h-4"/><path d="M3 15v-2a2 2 0 0 1 2-2h4"/></svg>
-                  </span>
-                  <div class="scoreboard-gameplan-content">
-                    <div class="scoreboard-gameplan-title">Advocacy</div>
-                    <div class="scoreboard-gameplan-desc">Protecting your interests and rights</div>
-                  </div>
-                </div>
-                <div class="scoreboard-gameplan-item">
-                  <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                  </span>
-                  <div class="scoreboard-gameplan-content">
-                    <div class="scoreboard-gameplan-title">Management</div>
-                    <div class="scoreboard-gameplan-desc">Professional oversight of your business matters</div>
-                  </div>
-                </div>
-                <div class="scoreboard-gameplan-item">
-                  <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M12 19v-6"/><path d="M9 19h6"/></svg>
-                  </span>
-                  <div class="scoreboard-gameplan-content">
-                    <div class="scoreboard-gameplan-title">Execution</div>
-                    <div class="scoreboard-gameplan-desc">Implementation of strategies for your success</div>
-                  </div>
-                </div>
+                <button class="carousel-arrow right" id="gameplan-arrow-right" aria-label="Next Game Plan">&#8594;</button>
+              </div>
+              <div class="carousel-details" id="gameplan-carousel-details">
+                <!-- Title and description will be injected by JS -->
               </div>
             </div>
             <style>
-              .scoreboard-gameplan {
-                max-width: 1200px;
+              .scoreboard-gameplan-carousel {
+                max-width: 900px;
                 margin: 0 auto;
-                padding: 48px 8px 56px 8px;
+                padding: 100px 8px 56px 8px;
                 color: #fff;
                 text-align: center;
               }
-              .scoreboard-gameplan h2 {
-                font-size: 2.2rem;
+              .scoreboard-gameplan-carousel h2 {
+                font-size: 2.1rem;
                 font-weight: 900;
                 margin-bottom: 18px;
               }
               .scoreboard-gameplan-sub {
                 font-size: 1.18rem;
                 color: #e0e0e0;
-                margin-bottom: 44px;
+                margin-bottom: 32px;
                 font-weight: 400;
                 max-width: 800px;
                 margin-left: auto;
                 margin-right: auto;
               }
-              .scoreboard-gameplan-grid {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                overflow-x: auto;
-                overflow-y: hidden;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                gap: 15px;
-                padding: 0 15px;
-              }
-              .scoreboard-gameplan-item {
-                display: flex;
-                flex-direction: column;
-                width: 280px;
-                min-width: 280px;
-                max-width: 280px;
-                padding: 20px 15px;
-                margin-bottom: 20px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 8px;
-                text-align: center;
-                box-sizing: border-box;
-                overflow-x: hidden;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-                scroll-snap-align: start;
-                background-color: rgba(255, 255, 255, 0.05);
-              }
-              .scoreboard-gameplan-icon-bg {
+              .carousel-container {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 56px;
-                height: 56px;
-                border-radius: 50%;
-                background: #ffffff;
-                margin-bottom: 18px;
-                margin-left: auto;
-                margin-right: auto;
+                gap: 24px;
+                position: relative;
+                margin-bottom: 32px;
               }
-              .scoreboard-gameplan-title {
-                font-size: 1.13rem;
+              .carousel-arrow {
+                background: #222;
+                color: #fff;
+                border: none;
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: opacity 0.2s;
+                z-index: 2;
+              }
+              .carousel-arrow:hover {
+                opacity: 1;
+              }
+              .carousel-track {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                width: 600px;
+                max-width: 90vw;
+                overflow: hidden;
+                position: relative;
+                min-height: 260px;
+              }
+              .carousel-slide {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.4s cubic-bezier(.4,0,.2,1), filter 0.4s, opacity 0.4s;
+                opacity: 0.6;
+                filter: blur(1px) grayscale(40%);
+                cursor: pointer;
+                z-index: 1;
+              }
+              .carousel-slide.center {
+                transform: scale(1.25);
+                opacity: 1;
+                filter: none;
+                z-index: 2;
+              }
+              .carousel-slide .carousel-icon {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+                overflow: hidden;
+              }
+              .carousel-slide.center .carousel-icon {
+                border: 4px solid #fff;
+                background: #222;
+              }
+              .carousel-slide svg {
+                width: 64px;
+                height: 64px;
+                stroke: #333;
+              }
+              .carousel-slide .carousel-title {
+                margin-top: 8px;
+                font-size: 1.08rem;
                 font-weight: 700;
+                color: #fff;
+                text-align: center;
+                letter-spacing: 0.5px;
+              }
+              .carousel-details {
+                margin-top: 18px;
+                min-height: 60px;
+              }
+              .carousel-details .carousel-title {
+                font-size: 1.2rem;
+                font-weight: 900;
                 margin-bottom: 8px;
                 color: #fff;
+                text-align: center;
               }
-              .scoreboard-gameplan-desc {
+              .carousel-details .carousel-desc {
                 font-size: 1rem;
                 color: #e0e0e0;
-                font-weight: 400;
+                text-align: center;
+                max-width: 500px;
+                margin: 0 auto;
               }
               @media (max-width: 700px) {
-                .scoreboard-gameplan {
-                  padding: 24px 2vw 32px 2vw;
+                .scoreboard-gameplan-carousel {
+                  padding: 24px 2vw 18px 2vw;
                 }
-                .scoreboard-gameplan-grid {
-                  grid-template-columns: 1fr;
-                  grid-template-rows: none;
-                  gap: 18px;
+                .carousel-track {
+                  width: 98vw;
+                  gap: 6vw;
+                  min-height: 120px;
                 }
-                .scoreboard-gameplan-item {
-                  padding: 18px 6px 14px 6px;
+                .carousel-slide .carousel-icon {
+                  width: 70px;
+                  height: 70px;
+                  min-width: 70px;
+                  min-height: 70px;
+                  max-width: 80px;
+                  max-height: 80px;
                 }
-                .scoreboard-gameplan h2 {
-                  font-size: 1.4rem;
+                .carousel-slide svg {
+                  width: 32px;
+                  height: 32px;
                 }
-                .scoreboard-gameplan-sub {
-                  font-size: 1rem;
-                }
-                .scoreboard-gameplan-title {
-                  font-size: 1rem;
-                }
-                .scoreboard-gameplan-desc {
-                  font-size: 0.93rem;
-                }
-                .scoreboard-gameplan-icon-bg {
+                .carousel-arrow {
                   width: 38px;
                   height: 38px;
-                  margin-bottom: 10px;
+                  font-size: 1.5rem;
                 }
               }
             </style>
+            <script>
+            // GAME Plan data
+            const gameplanData = [
+              {
+                icon: `<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\"/></svg>`,
+                title: "Guidance",
+                desc: "Expert advice to help navigate your journey"
+              },
+              {
+                icon: `<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 21v-2a4 4 0 0 0-8 0v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/><path d=\"M21 15v-2a2 2 0 0 0-2-2h-4\"/><path d=\"M3 15v-2a2 2 0 0 1 2-2h4\"/></svg>`,
+                title: "Advocacy",
+                desc: "Protecting your interests and rights"
+              },
+              {
+                icon: `<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 8v4l3 3\"/></svg>`,
+                title: "Management",
+                desc: "Professional oversight of your business matters"
+              },
+              {
+                icon: `<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10\"/><path d=\"M12 19v-6\"/><path d=\"M9 19h6\"/></svg>`,
+                title: "Execution",
+                desc: "Implementation of strategies for your success"
+              }
+            ];
+            let gameplanIndex = 0;
+            function renderGameplanCarousel() {
+              const track = document.getElementById('gameplan-carousel-track');
+              const details = document.getElementById('gameplan-carousel-details');
+              track.innerHTML = '';
+              // Show 3 slides: prev, center, next
+              const prev = (gameplanIndex - 1 + gameplanData.length) % gameplanData.length;
+              const next = (gameplanIndex + 1) % gameplanData.length;
+              [prev, gameplanIndex, next].forEach((idx, i) => {
+                const slide = document.createElement('div');
+                slide.className = 'carousel-slide' + (idx === gameplanIndex ? ' center' : '');
+                slide.innerHTML = `<div class='carousel-icon'>${gameplanData[idx].icon}</div><div class='carousel-title'>${gameplanData[idx].title}</div>`;
+                track.appendChild(slide);
+              });
+              // Details for center
+              details.innerHTML = `<div class='carousel-title'>${gameplanData[gameplanIndex].title}</div><div class='carousel-desc'>${gameplanData[gameplanIndex].desc}</div>`;
+            }
+            document.getElementById('gameplan-arrow-left').onclick = function() {
+              gameplanIndex = (gameplanIndex - 1 + gameplanData.length) % gameplanData.length;
+              renderGameplanCarousel();
+            };
+            document.getElementById('gameplan-arrow-right').onclick = function() {
+              gameplanIndex = (gameplanIndex + 1) % gameplanData.length;
+              renderGameplanCarousel();
+            };
+            // Initial render
+            renderGameplanCarousel();
+            // Shared arrow key navigation for both carousels
+            document.addEventListener('keydown', function(e) {
+              if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+              const servicesSection = document.querySelector('.scoreboard-services-carousel');
+              const gameplanSection = document.querySelector('.scoreboard-gameplan-carousel');
+              const servicesVisible = servicesSection && servicesSection.offsetParent !== null;
+              const gameplanVisible = gameplanSection && gameplanSection.offsetParent !== null;
+              if (e.key === 'ArrowLeft') {
+                if (servicesVisible) {
+                  document.getElementById('services-arrow-left').click();
+                } else if (gameplanVisible) {
+                  document.getElementById('gameplan-arrow-left').click();
+                }
+              } else if (e.key === 'ArrowRight') {
+                if (servicesVisible) {
+                  document.getElementById('services-arrow-right').click();
+                } else if (gameplanVisible) {
+                  document.getElementById('gameplan-arrow-right').click();
+                }
+              }
+            });
+            </script>
           </li>
           <li class="l-section section">
             <div class="team-section" style="display: flex; align-items: flex-start; justify-content: center; max-width: 1000px; margin: 0 auto; padding: 100px 20px 80px 20px; color: #fff;">
@@ -1173,7 +1296,7 @@
           </li>
           <li class="l-section section">
             <div class="scoreboard-contact">
-              <h2>Let's Get To Work</h2>
+              <h2>Contact</h2>
               <p class="scoreboard-contact-sub">Ready to take your organization to the next level?<br>Let's discuss how Scoreboard Strategy can help you win where it matters most.</p>
               
               <div class="scoreboard-contact-form">
