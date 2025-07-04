@@ -22,14 +22,65 @@
         background-color: #0c0c0c !important;
         -webkit-text-size-adjust: 100% !important;
         -ms-text-size-adjust: 100% !important;
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      /* Fix viewport and container overflow */
+      .l-viewport {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+      }
+      
+      .l-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+      }
+      
+      .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+      
+      /* Fix sections to prevent overflow */
+      .l-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
       }
       
       /* Force all text to be white and visible */
       * {
         color: #fff !important;
+        box-sizing: border-box !important;
       }
       
       /* Fix intro section */
+      .intro {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+      }
+      
+      .intro--banner {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 0 !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+      }
+      
       .intro--banner h1 {
         color: #fff !important;
         font-size: 2.5rem !important;
@@ -41,6 +92,10 @@
         right: auto !important;
         left: auto !important;
         bottom: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .intro--banner img {
@@ -67,6 +122,9 @@
         max-width: 100% !important;
         width: 100% !important;
         box-sizing: border-box !important;
+        overflow-x: hidden !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       /* Fix all headings */
@@ -79,6 +137,10 @@
         text-align: center !important;
         margin-bottom: 30px !important;
         display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       /* Fix all description text */
@@ -91,6 +153,10 @@
         line-height: 1.6 !important;
         margin-bottom: 20px !important;
         display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       /* Fix bullet points */
@@ -99,6 +165,8 @@
         display: block !important;
         width: 100% !important;
         max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-who-bullets > div {
@@ -106,6 +174,8 @@
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 10px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-who-bullets p {
@@ -115,6 +185,10 @@
         margin-bottom: 10px !important;
         display: flex !important;
         align-items: flex-start !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .scoreboard-check {
@@ -129,6 +203,9 @@
         color: #fff !important;
         display: block !important;
         width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-service-row {
@@ -141,6 +218,9 @@
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 8px !important;
         box-sizing: border-box !important;
+        overflow-x: hidden !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .scoreboard-service-icon {
@@ -148,13 +228,18 @@
         display: block !important;
         text-align: center !important;
         margin-bottom: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
       
       .scoreboard-service-content {
         color: #fff !important;
         display: block !important;
         width: 100% !important;
+        max-width: 100% !important;
         text-align: center !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-service-title {
@@ -163,6 +248,10 @@
         font-weight: 700 !important;
         margin-bottom: 10px !important;
         display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .scoreboard-service-desc {
@@ -170,6 +259,10 @@
         font-size: 1rem !important;
         line-height: 1.5 !important;
         display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       /* Fix gameplan section */
@@ -177,6 +270,9 @@
         color: #fff !important;
         display: block !important;
         width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-gameplan-item {
@@ -190,6 +286,9 @@
         border-radius: 8px !important;
         text-align: center !important;
         box-sizing: border-box !important;
+        overflow-x: hidden !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .scoreboard-gameplan-icon-bg {
@@ -197,12 +296,17 @@
         display: block !important;
         text-align: center !important;
         margin-bottom: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
       
       .scoreboard-gameplan-content {
         color: #fff !important;
         display: block !important;
         width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-gameplan-title {
@@ -211,6 +315,10 @@
         font-weight: 700 !important;
         margin-bottom: 10px !important;
         display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .scoreboard-gameplan-desc {
@@ -218,6 +326,10 @@
         font-size: 1rem !important;
         line-height: 1.5 !important;
         display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       /* Fix contact section */
@@ -226,13 +338,18 @@
         display: block !important;
         width: 100% !important;
         max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-form-group {
         color: #fff !important;
         display: block !important;
         width: 100% !important;
+        max-width: 100% !important;
         margin-bottom: 20px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-form-group input,
@@ -241,10 +358,12 @@
         font-size: 16px !important;
         padding: 12px !important;
         width: 100% !important;
+        max-width: 100% !important;
         background-color: rgba(255, 255, 255, 0.1) !important;
         border: 1px solid rgba(255, 255, 255, 0.3) !important;
         border-radius: 4px !important;
         box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .scoreboard-submit-btn {
@@ -259,6 +378,7 @@
         max-width: 300px !important;
         margin: 0 auto !important;
         display: block !important;
+        box-sizing: border-box !important;
       }
       
       /* Fix footer */
@@ -266,12 +386,20 @@
         color: #fff !important;
         padding: 20px 15px !important;
         background-color: #0c0c0c !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .footer-content {
         color: #fff !important;
         display: block !important;
         text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .footer-disclaimer p {
@@ -279,6 +407,10 @@
         font-size: 0.9rem !important;
         line-height: 1.5 !important;
         margin-bottom: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .footer-links {
@@ -286,6 +418,10 @@
         display: block !important;
         text-align: center !important;
         margin-bottom: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       
       .footer-link {
@@ -293,11 +429,17 @@
         text-decoration: none !important;
         font-weight: 600 !important;
         margin: 0 10px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       .footer-copyright p {
         color: #fff !important;
         font-size: 0.9rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
       }
       
       /* Hide sidebar navigation */
@@ -308,12 +450,6 @@
       /* Show mobile navigation */
       .mobile-nav {
         display: block !important;
-      }
-      
-      /* Fix any overflow */
-      .l-viewport,
-      .container {
-        overflow-x: hidden !important;
       }
     }
     
