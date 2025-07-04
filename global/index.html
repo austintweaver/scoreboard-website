@@ -824,6 +824,18 @@
         max-width: 55vw !important;
       }
     }
+    @media (max-width: 700px) {
+      .team-headshot {
+        width: 180px !important;
+        max-width: 60vw !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .team-headshot {
+        width: 120px !important;
+        max-width: 45vw !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -921,7 +933,6 @@
           <li class="l-section section">
             <div class="work scoreboard-who-we-are">
               <h2>What We Do</h2>
-              <div class="scoreboard-who-sub">From optimizing operations to guiding growth initiatives, we provide tailored solutions that meet clients where they are and deliver winning results.</div>
               <p class="scoreboard-who-desc">Scoreboard Strategy delivers fractional business consulting designed to help athletes, entertainers, executives, and organizations operate more efficiently, scale with confidence, and make smarter decisions. Our subscription-based model provides access to high-level strategic support—without the cost or commitment of a full-time hire.</p>
               <div class="scoreboard-who-bullets">
                 <div>
@@ -1237,6 +1248,7 @@
               }
             </style>
             <script>
+            document.addEventListener('DOMContentLoaded', function() {
             // Service data (from your original HTML)
             const servicesData = [
               {
@@ -1337,6 +1349,7 @@
                 renderCarousel();
               }
             }
+            });
             </script>
           </li>
           <li class="l-section section">
@@ -1694,7 +1707,7 @@
                 }
               </style>
               <div class="team-image" style="flex: 1; text-align: center; padding-right: 40px; padding-top: 80px;">
-                <img src="assets/img/weaver-headshot.jpeg" alt="Austin Weaver" style="width: 350px; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <img src="assets/img/weaver-headshot.jpeg" alt="Austin Weaver" class="team-headshot" style="width: 350px; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
               </div>
               <div class="team-content" style="flex: 2; padding-top: 40px;">
                 <h2 style="font-size: 42px; font-weight: 900; margin-bottom: 24px;">Austin Weaver</h2>
