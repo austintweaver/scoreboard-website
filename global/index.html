@@ -710,9 +710,8 @@
           </li>
           <li class="l-section section">
             <div class="work scoreboard-who-we-are">
-              <h2>Who We Are</h2>
+              <h2>What We Do</h2>
               <p class="scoreboard-who-desc">Scoreboard Strategy delivers fractional business consulting designed to help athletes, entertainers, executives, and organizations operate more efficiently, scale with confidence, and make smarter decisions. Our subscription-based model provides access to high-level strategic support—without the cost or commitment of a full-time hire.</p>
-              <p class="scoreboard-who-desc">From optimizing operations to guiding growth initiatives, we provide tailored solutions that meet clients where they are and deliver winning results.</p>
               <div class="scoreboard-who-bullets">
                 <div>
                   <p><span class="scoreboard-check">✔️</span> Strategic business consulting for operations, growth, and development.</p>
@@ -723,7 +722,6 @@
                   <p><span class="scoreboard-check">✔️</span> Subscription-based pricing for predictability and affordability.</p>
                 </div>
               </div>
-              <p class="scoreboard-who-desc scoreboard-who-final">Whether you're building something new or taking your operation to the next level, Scoreboard Strategy is your partner in winning where it matters most.</p>
             </div>
             <style>
               .scoreboard-who-we-are {
@@ -894,12 +892,12 @@
                 z-index: 2;
               }
               .carousel-slide .carousel-icon {
-                width: 140px;
-                height: 140px;
+                width: 120px;
+                height: 120px;
                 min-width: 70px;
                 min-height: 70px;
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 120px;
+                max-height: 120px;
                 border-radius: 50%;
                 background: transparent;
                 border: 4px solid #fff;
@@ -909,16 +907,19 @@
                 margin-bottom: 18px;
                 box-shadow: 0 4px 24px rgba(0,0,0,0.10);
                 overflow: hidden;
+                padding: 0;
               }
               .carousel-slide.center .carousel-icon {
                 border: 4px solid #fff;
                 background: transparent;
               }
               .carousel-slide svg {
-                width: 64px;
-                height: 64px;
+                width: 48px;
+                height: 48px;
                 stroke: #fff;
                 fill: none;
+                display: block;
+                margin: auto;
               }
               .carousel-slide .carousel-title {
                 margin-top: 8px;
@@ -953,22 +954,20 @@
                 .carousel-track {
                   width: 98vw;
                   gap: 6vw;
-                  min-height: 120px;
+                  min-height: 90px;
                 }
                 .carousel-slide .carousel-icon {
                   width: 70px;
                   height: 70px;
                   min-width: 70px;
                   min-height: 70px;
+                  max-width: 70px;
+                  max-height: 70px;
+                  padding: 0;
                 }
                 .carousel-slide svg {
-                  width: 32px;
-                  height: 32px;
-                }
-                .carousel-arrow {
-                  width: 38px;
-                  height: 38px;
-                  font-size: 1.5rem;
+                  width: 28px;
+                  height: 28px;
                 }
               }
             </style>
@@ -1025,9 +1024,10 @@
               const prev = (currentIndex - 1 + servicesData.length) % servicesData.length;
               const next = (currentIndex + 1) % servicesData.length;
               [prev, currentIndex, next].forEach((idx, i) => {
+                const isCenter = idx === currentIndex;
                 const slide = document.createElement('div');
-                slide.className = 'carousel-slide' + (idx === currentIndex ? ' center' : '');
-                slide.innerHTML = `<div class='carousel-icon'>${servicesData[idx].icon}</div><div class='carousel-title'>${servicesData[idx].title}</div>`;
+                slide.className = 'carousel-slide' + (isCenter ? ' center' : '');
+                slide.innerHTML = `<div class='carousel-icon'>${servicesData[idx].icon}</div>` + (!isCenter ? `<div class='carousel-title'>${servicesData[idx].title}</div>` : '');
                 track.appendChild(slide);
               });
               // Details for center
@@ -1138,12 +1138,12 @@
                 z-index: 2;
               }
               .carousel-slide .carousel-icon {
-                width: 140px;
-                height: 140px;
+                width: 120px;
+                height: 120px;
                 min-width: 70px;
                 min-height: 70px;
-                max-width: 140px;
-                max-height: 140px;
+                max-width: 120px;
+                max-height: 120px;
                 border-radius: 50%;
                 background: transparent;
                 border: 4px solid #fff;
@@ -1153,16 +1153,19 @@
                 margin-bottom: 18px;
                 box-shadow: 0 4px 24px rgba(0,0,0,0.10);
                 overflow: hidden;
+                padding: 0;
               }
               .carousel-slide.center .carousel-icon {
                 border: 4px solid #fff;
                 background: transparent;
               }
               .carousel-slide svg {
-                width: 64px;
-                height: 64px;
+                width: 48px;
+                height: 48px;
                 stroke: #fff;
                 fill: none;
+                display: block;
+                margin: auto;
               }
               .carousel-slide .carousel-title {
                 margin-top: 8px;
@@ -1197,22 +1200,20 @@
                 .carousel-track {
                   width: 98vw;
                   gap: 6vw;
-                  min-height: 120px;
+                  min-height: 90px;
                 }
                 .carousel-slide .carousel-icon {
                   width: 70px;
                   height: 70px;
                   min-width: 70px;
                   min-height: 70px;
+                  max-width: 70px;
+                  max-height: 70px;
+                  padding: 0;
                 }
                 .carousel-slide svg {
-                  width: 32px;
-                  height: 32px;
-                }
-                .carousel-arrow {
-                  width: 38px;
-                  height: 38px;
-                  font-size: 1.5rem;
+                  width: 28px;
+                  height: 28px;
                 }
               }
             </style>
@@ -1249,9 +1250,10 @@
               const prev = (gameplanIndex - 1 + gameplanData.length) % gameplanData.length;
               const next = (gameplanIndex + 1) % gameplanData.length;
               [prev, gameplanIndex, next].forEach((idx, i) => {
+                const isCenter = idx === gameplanIndex;
                 const slide = document.createElement('div');
-                slide.className = 'carousel-slide' + (idx === gameplanIndex ? ' center' : '');
-                slide.innerHTML = `<div class='carousel-icon'>${gameplanData[idx].icon}</div><div class='carousel-title'>${gameplanData[idx].title}</div>`;
+                slide.className = 'carousel-slide' + (isCenter ? ' center' : '');
+                slide.innerHTML = `<div class='carousel-icon'>${gameplanData[idx].icon}</div>` + (!isCenter ? `<div class='carousel-title'>${gameplanData[idx].title}</div>` : '');
                 track.appendChild(slide);
               });
               // Details for center
