@@ -10,43 +10,26 @@
   <meta name="author" content="Austin Weaver">
   <link rel="stylesheet" href="assets/css/main.css?v=1">
   <style>
-    /* Mobile Responsiveness Fixes - Focused on text visibility only */
+    /* Aggressive Mobile Fixes - Target actual classes */
     
-    /* Ensure text is always visible and readable */
-    body, html {
-      font-size: 16px !important;
-      line-height: 1.5 !important;
-      color: #fff !important;
-      background-color: #0c0c0c !important;
-      -webkit-text-size-adjust: 100% !important;
-      -ms-text-size-adjust: 100% !important;
-    }
-    
-    /* Mobile breakpoint - apply to all mobile devices */
+    /* Force mobile viewport */
     @media (max-width: 768px) {
-      /* Fix container and wrapper for mobile */
-      .l-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 15px !important;
+      /* Basic mobile setup */
+      body, html {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        color: #fff !important;
+        background-color: #0c0c0c !important;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
       }
       
-      /* Fix intro section content */
-      .intro {
-        max-width: 100% !important;
-        padding: 20px 0 !important;
+      /* Force all text to be white and visible */
+      * {
+        color: #fff !important;
       }
       
-      .intro--banner {
-        height: auto !important;
-        min-height: 300px !important;
-        padding: 20px 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-      }
-      
+      /* Fix intro section */
       .intro--banner h1 {
         color: #fff !important;
         font-size: 2.5rem !important;
@@ -57,9 +40,11 @@
         top: auto !important;
         right: auto !important;
         left: auto !important;
+        bottom: auto !important;
       }
       
       .intro--banner img {
+        color: #fff !important;
         max-width: 100% !important;
         width: 200px !important;
         height: auto !important;
@@ -67,47 +52,69 @@
         top: auto !important;
         left: auto !important;
         right: auto !important;
+        bottom: auto !important;
         margin: 0 auto 20px auto !important;
         display: block !important;
       }
       
-      /* Fix work sections content */
-      .work {
+      /* Fix all scoreboard sections */
+      .scoreboard-who-we-are,
+      .scoreboard-services-minimal,
+      .scoreboard-gameplan,
+      .scoreboard-contact {
+        color: #fff !important;
+        padding: 20px 15px !important;
         max-width: 100% !important;
-        padding: 20px 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
       }
       
-      .work h2, .scoreboard-who-we-are h2, .scoreboard-services-minimal h2, .scoreboard-game-plan h2, .scoreboard-team h2, .scoreboard-contact h2 {
+      /* Fix all headings */
+      .scoreboard-who-we-are h2,
+      .scoreboard-services-minimal h2,
+      .scoreboard-gameplan h2,
+      .scoreboard-contact h2 {
         color: #fff !important;
         font-size: 2rem !important;
         text-align: center !important;
         margin-bottom: 30px !important;
+        display: block !important;
       }
       
-      .scoreboard-who-desc, .scoreboard-who-bullets p, .scoreboard-service-desc, .scoreboard-game-desc, .scoreboard-team-desc {
+      /* Fix all description text */
+      .scoreboard-who-desc,
+      .scoreboard-who-final,
+      .scoreboard-gameplan-sub,
+      .scoreboard-contact-sub {
         color: #fff !important;
         font-size: 1rem !important;
         line-height: 1.6 !important;
         margin-bottom: 20px !important;
+        display: block !important;
       }
       
+      /* Fix bullet points */
       .scoreboard-who-bullets {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 10px !important;
-        width: 100% !important;
-      }
-      
-      .scoreboard-who-bullets > div {
+        color: #fff !important;
+        display: block !important;
         width: 100% !important;
         max-width: 100% !important;
       }
       
+      .scoreboard-who-bullets > div {
+        color: #fff !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+      
       .scoreboard-who-bullets p {
         color: #fff !important;
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 10px !important;
         display: flex !important;
         align-items: flex-start !important;
-        margin-bottom: 10px !important;
       }
       
       .scoreboard-check {
@@ -117,34 +124,37 @@
         flex-shrink: 0 !important;
       }
       
-      /* Fix services section content */
-      .scoreboard-services-minimal {
-        max-width: 100% !important;
-        padding: 20px 0 !important;
+      /* Fix services section */
+      .scoreboard-services-list {
+        color: #fff !important;
+        display: block !important;
+        width: 100% !important;
       }
       
       .scoreboard-service-row {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        border-radius: 8px !important;
-        padding: 20px 10px !important;
-        margin-bottom: 20px !important;
+        color: #fff !important;
+        display: block !important;
         width: 100% !important;
         max-width: 100% !important;
+        padding: 20px 10px !important;
+        margin-bottom: 20px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
+        box-sizing: border-box !important;
       }
       
       .scoreboard-service-icon {
-        display: flex !important;
-        justify-content: center !important;
+        color: #fff !important;
+        display: block !important;
+        text-align: center !important;
         margin-bottom: 15px !important;
       }
       
       .scoreboard-service-content {
+        color: #fff !important;
+        display: block !important;
         width: 100% !important;
-        max-width: 100% !important;
+        text-align: center !important;
       }
       
       .scoreboard-service-title {
@@ -162,45 +172,86 @@
         display: block !important;
       }
       
-      /* Fix contact section content */
-      .contact--lockup {
-        max-width: 100% !important;
-        padding: 20px 15px !important;
-        justify-content: center !important;
-        align-items: center !important;
-      }
-      
-      .contact--lockup .modal {
-        width: 100% !important;
-        max-width: 400px !important;
-        padding: 30px 20px !important;
-        background-color: rgba(12, 12, 12, 0.95) !important;
-      }
-      
-      /* Fix form elements */
-      .work-request {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-      
-      .work-request input[type="text"],
-      .work-request input[type="email"],
-      .work-request textarea {
-        font-size: 16px !important;
-        padding: 12px !important;
+      /* Fix gameplan section */
+      .scoreboard-gameplan-grid {
         color: #fff !important;
-        background-color: rgba(255, 255, 255, 0.1) !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
-        border-radius: 4px !important;
+        display: block !important;
         width: 100% !important;
+      }
+      
+      .scoreboard-gameplan-item {
+        color: #fff !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 10px !important;
+        margin-bottom: 20px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
+        text-align: center !important;
         box-sizing: border-box !important;
       }
       
-      .work-request input[type="submit"] {
+      .scoreboard-gameplan-icon-bg {
+        color: #fff !important;
+        display: block !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
+      }
+      
+      .scoreboard-gameplan-content {
+        color: #fff !important;
+        display: block !important;
+        width: 100% !important;
+      }
+      
+      .scoreboard-gameplan-title {
+        color: #fff !important;
+        font-size: 1.2rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 10px !important;
+        display: block !important;
+      }
+      
+      .scoreboard-gameplan-desc {
+        color: #fff !important;
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        display: block !important;
+      }
+      
+      /* Fix contact section */
+      .scoreboard-contact-form {
+        color: #fff !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      .scoreboard-form-group {
+        color: #fff !important;
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .scoreboard-form-group input,
+      .scoreboard-form-group textarea {
+        color: #fff !important;
+        font-size: 16px !important;
+        padding: 12px !important;
+        width: 100% !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 4px !important;
+        box-sizing: border-box !important;
+      }
+      
+      .scoreboard-submit-btn {
+        color: #fff !important;
         font-size: 16px !important;
         padding: 15px !important;
         background-color: #8C1C13 !important;
-        color: #fff !important;
         border: none !important;
         border-radius: 4px !important;
         cursor: pointer !important;
@@ -210,16 +261,16 @@
         display: block !important;
       }
       
-      /* Fix footer text */
+      /* Fix footer */
       .scoreboard-footer {
         color: #fff !important;
         padding: 20px 15px !important;
+        background-color: #0c0c0c !important;
       }
       
       .footer-content {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
+        color: #fff !important;
+        display: block !important;
         text-align: center !important;
       }
       
@@ -227,19 +278,21 @@
         color: #fff !important;
         font-size: 0.9rem !important;
         line-height: 1.5 !important;
+        margin-bottom: 15px !important;
       }
       
       .footer-links {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        flex-wrap: wrap !important;
+        color: #fff !important;
+        display: block !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
       }
       
       .footer-link {
         color: #8C1C13 !important;
         text-decoration: none !important;
         font-weight: 600 !important;
+        margin: 0 10px !important;
       }
       
       .footer-copyright p {
@@ -247,7 +300,7 @@
         font-size: 0.9rem !important;
       }
       
-      /* Hide sidebar navigation on mobile */
+      /* Hide sidebar navigation */
       .l-side-nav {
         display: none !important;
       }
@@ -257,18 +310,8 @@
         display: block !important;
       }
       
-      /* Ensure sections have proper padding for mobile */
-      .work, .scoreboard-who-we-are, .scoreboard-services-minimal, .scoreboard-game-plan, .scoreboard-team, .scoreboard-contact {
-        padding: 20px 15px !important;
-        max-width: 100% !important;
-        width: 100% !important;
-      }
-      
-      /* Fix any overflow issues */
-      .l-viewport {
-        overflow-x: hidden !important;
-      }
-      
+      /* Fix any overflow */
+      .l-viewport,
       .container {
         overflow-x: hidden !important;
       }
@@ -284,26 +327,27 @@
         width: 150px !important;
       }
       
-      .work h2, .scoreboard-who-we-are h2, .scoreboard-services-minimal h2, .scoreboard-game-plan h2, .scoreboard-team h2, .scoreboard-contact h2 {
+      .scoreboard-who-we-are h2,
+      .scoreboard-services-minimal h2,
+      .scoreboard-gameplan h2,
+      .scoreboard-contact h2 {
         font-size: 1.5rem !important;
       }
       
-      .scoreboard-who-desc, .scoreboard-who-bullets p, .scoreboard-service-desc, .scoreboard-game-desc, .scoreboard-team-desc {
+      .scoreboard-who-desc,
+      .scoreboard-who-final,
+      .scoreboard-gameplan-sub,
+      .scoreboard-contact-sub,
+      .scoreboard-who-bullets p,
+      .scoreboard-service-desc,
+      .scoreboard-gameplan-desc {
         font-size: 0.95rem !important;
       }
       
-      .scoreboard-service-title {
+      .scoreboard-service-title,
+      .scoreboard-gameplan-title {
         font-size: 1.1rem !important;
       }
-      
-      .work, .scoreboard-who-we-are, .scoreboard-services-minimal, .scoreboard-game-plan, .scoreboard-team, .scoreboard-contact {
-        padding: 15px 10px !important;
-      }
-    }
-    
-    /* Ensure all text is visible */
-    * {
-      color: inherit !important;
     }
     
     /* Mobile Navigation Styles */
