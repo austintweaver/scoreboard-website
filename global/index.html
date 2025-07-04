@@ -9,6 +9,316 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Austin Weaver">
   <link rel="stylesheet" href="assets/css/main.css?v=1">
+  <style>
+    /* Mobile Responsiveness Fixes */
+    @media (max-width: 768px) {
+      /* Fix viewport and container */
+      .l-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px;
+      }
+      
+      /* Fix text visibility and sizing */
+      body {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* Fix intro section */
+      .intro {
+        max-width: 100% !important;
+        padding: 20px 0;
+      }
+      
+      .intro--banner {
+        height: auto !important;
+        min-height: 200px;
+        padding: 20px 0;
+      }
+      
+      .intro--banner h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        text-align: center !important;
+        margin: 20px 0;
+      }
+      
+      .intro--banner img {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 200px !important;
+        height: auto !important;
+        margin: 0 auto 20px auto;
+        display: block !important;
+      }
+      
+      /* Fix work/sections */
+      .work {
+        max-width: 100% !important;
+        padding: 20px 0;
+      }
+      
+      .work h2 {
+        font-size: 2rem !important;
+        margin-bottom: 30px !important;
+      }
+      
+      /* Fix scoreboard sections */
+      .scoreboard-who-we-are {
+        padding: 20px 15px !important;
+        max-width: 100% !important;
+      }
+      
+      .scoreboard-who-we-are h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .scoreboard-who-desc {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .scoreboard-who-bullets {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+      
+      .scoreboard-who-bullets > div {
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      
+      .scoreboard-who-bullets p {
+        font-size: 1rem !important;
+        margin-bottom: 10px !important;
+      }
+      
+      /* Fix services section */
+      .scoreboard-services-minimal {
+        padding: 20px 15px !important;
+      }
+      
+      .scoreboard-services-minimal h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 30px !important;
+      }
+      
+      .scoreboard-service-row {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px 10px !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .scoreboard-service-icon {
+        margin-bottom: 15px !important;
+      }
+      
+      .scoreboard-service-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 10px !important;
+      }
+      
+      .scoreboard-service-desc {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* Fix contact section */
+      .contact {
+        position: relative !important;
+        height: auto !important;
+        min-height: 100vh;
+      }
+      
+      .contact--lockup {
+        max-width: 100% !important;
+        padding: 20px 15px;
+        justify-content: center !important;
+      }
+      
+      .contact--lockup .modal {
+        padding: 30px 20px !important;
+        width: 100% !important;
+        max-width: 400px;
+      }
+      
+      /* Fix form elements */
+      .work-request input[type="text"],
+      .work-request input[type="email"],
+      .work-request textarea {
+        font-size: 16px !important;
+        padding: 10px !important;
+      }
+      
+      .work-request input[type="submit"] {
+        width: 100% !important;
+        max-width: 300px !important;
+        font-size: 16px !important;
+        padding: 15px !important;
+      }
+      
+      /* Fix footer */
+      .footer {
+        position: relative !important;
+        padding: 20px 15px !important;
+      }
+      
+      .footer-content {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+      }
+      
+      .footer-buttons {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+      
+      .footer-button {
+        width: 100% !important;
+        max-width: 200px !important;
+        margin: 0 auto !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .intro--banner h1 {
+        font-size: 2rem !important;
+      }
+      
+      .intro--banner img {
+        width: 150px !important;
+      }
+      
+      .work h2,
+      .scoreboard-who-we-are h2,
+      .scoreboard-services-minimal h2 {
+        font-size: 1.5rem !important;
+      }
+      
+      .scoreboard-who-desc,
+      .scoreboard-who-bullets p,
+      .scoreboard-service-desc {
+        font-size: 0.95rem !important;
+      }
+      
+      .scoreboard-service-title {
+        font-size: 1.1rem !important;
+      }
+    }
+    
+    /* Ensure text is always visible */
+    * {
+      color: inherit !important;
+    }
+    
+    /* Fix any hidden elements */
+    .section--is-active {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
+    /* Ensure proper contrast */
+    body {
+      background-color: #0c0c0c !important;
+      color: #fff !important;
+    }
+    
+    /* Fix any overflow issues */
+    .l-viewport {
+      overflow-x: hidden !important;
+    }
+    
+    .container {
+      overflow-x: hidden !important;
+    }
+    
+    /* Mobile Navigation Styles */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .mobile-nav.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-nav-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 300px;
+      text-align: center;
+    }
+    
+    .mobile-nav-header {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .mobile-nav-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+    
+    .mobile-nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .mobile-nav-menu li {
+      padding: 15px 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: color 0.3s ease;
+    }
+    
+    .mobile-nav-menu li:last-child {
+      border-bottom: none;
+    }
+    
+    .mobile-nav-menu li:hover {
+      color: #8C1C13;
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-nav {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -29,10 +339,27 @@
           <a class="header--logo" href="#" onclick="goToHome(); return false;">
             <img src="assets/img/scoreboard-logo-white.png" alt="Scoreboard" style="width: 150px; height: auto;">
           </a>
-          <div class="header--nav-toggle">
+          <div class="header--nav-toggle" onclick="toggleMobileNav()">
             <span></span>
           </div>
         </header>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+              <span class="mobile-nav-close" onclick="toggleMobileNav()">×</span>
+            </div>
+            <ul class="mobile-nav-menu">
+              <li onclick="goToSection(0)">Home</li>
+              <li onclick="goToSection(1)">What We Do</li>
+              <li onclick="goToSection(2)">Services</li>
+              <li onclick="goToSection(3)">GAME Plan</li>
+              <li onclick="goToSection(4)">Team</li>
+              <li onclick="goToSection(5)">Contact</li>
+            </ul>
+          </div>
+        </div>
         <nav class="l-side-nav">
           <ul class="side-nav">
             <li class="is-active"><span>Home</span></li>
@@ -992,6 +1319,51 @@ $(document).on('click', '.side-nav li, .outer-nav li', function() {
 
 // Check on window focus (in case user navigates with browser back/forward)
 window.addEventListener('focus', updateFooterVisibility);
+
+// Mobile Navigation Functions
+function toggleMobileNav() {
+  const mobileNav = document.getElementById('mobileNav');
+  if (mobileNav.classList.contains('is-active')) {
+    mobileNav.classList.remove('is-active');
+  } else {
+    mobileNav.classList.add('is-active');
+  }
+}
+
+function goToSection(sectionIndex) {
+  // Close mobile nav
+  toggleMobileNav();
+  
+  // Remove active class from all sections
+  $('.section').removeClass('section--is-active');
+  $('.l-section').removeClass('section--is-active');
+  
+  // Add active class to target section
+  $('.l-section').eq(sectionIndex).addClass('section--is-active');
+  
+  // Update side navigation
+  $('.side-nav li').removeClass('is-active');
+  $('.side-nav li').eq(sectionIndex).addClass('is-active');
+  
+  // Update outer navigation
+  $('.outer-nav li').removeClass('is-active');
+  $('.outer-nav li').eq(sectionIndex).addClass('is-active');
+  
+  // Update footer visibility
+  setTimeout(updateFooterVisibility, 200);
+}
+
+// Close mobile nav when clicking outside
+document.addEventListener('click', function(event) {
+  const mobileNav = document.getElementById('mobileNav');
+  const navToggle = document.querySelector('.header--nav-toggle');
+  
+  if (mobileNav.classList.contains('is-active') && 
+      !mobileNav.contains(event.target) && 
+      !navToggle.contains(event.target)) {
+    mobileNav.classList.remove('is-active');
+  }
+});
 
 </script>
 </body>
