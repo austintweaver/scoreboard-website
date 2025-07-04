@@ -1024,10 +1024,9 @@
               const prev = (currentIndex - 1 + servicesData.length) % servicesData.length;
               const next = (currentIndex + 1) % servicesData.length;
               [prev, currentIndex, next].forEach((idx, i) => {
-                const isCenter = idx === currentIndex;
                 const slide = document.createElement('div');
-                slide.className = 'carousel-slide' + (isCenter ? ' center' : '');
-                slide.innerHTML = `<div class='carousel-icon'>${servicesData[idx].icon}</div>` + (!isCenter ? `<div class='carousel-title'>${servicesData[idx].title}</div>` : '');
+                slide.className = 'carousel-slide' + (idx === currentIndex ? ' center' : '');
+                slide.innerHTML = `<div class='carousel-icon'>${servicesData[idx].icon}</div>`;
                 track.appendChild(slide);
               });
               // Details for center
@@ -1250,10 +1249,9 @@
               const prev = (gameplanIndex - 1 + gameplanData.length) % gameplanData.length;
               const next = (gameplanIndex + 1) % gameplanData.length;
               [prev, gameplanIndex, next].forEach((idx, i) => {
-                const isCenter = idx === gameplanIndex;
                 const slide = document.createElement('div');
-                slide.className = 'carousel-slide' + (isCenter ? ' center' : '');
-                slide.innerHTML = `<div class='carousel-icon'>${gameplanData[idx].icon}</div>` + (!isCenter ? `<div class='carousel-title'>${gameplanData[idx].title}</div>` : '');
+                slide.className = 'carousel-slide' + (idx === gameplanIndex ? ' center' : '');
+                slide.innerHTML = `<div class='carousel-icon'>${gameplanData[idx].icon}</div>`;
                 track.appendChild(slide);
               });
               // Details for center
