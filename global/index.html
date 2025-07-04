@@ -201,19 +201,27 @@
       /* Fix services section */
       .scoreboard-services-list {
         color: #fff !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: row !important;
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 15px !important;
+        padding: 0 15px !important;
       }
       
       .scoreboard-service-row {
         color: #fff !important;
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 20px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 280px !important;
+        min-width: 280px !important;
+        max-width: 280px !important;
+        padding: 20px 15px !important;
         margin-bottom: 20px !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 8px !important;
@@ -221,6 +229,8 @@
         overflow-x: hidden !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
+        scroll-snap-align: start !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
       }
       
       .scoreboard-service-icon {
@@ -268,19 +278,27 @@
       /* Fix gameplan section */
       .scoreboard-gameplan-grid {
         color: #fff !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: row !important;
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 15px !important;
+        padding: 0 15px !important;
       }
       
       .scoreboard-gameplan-item {
         color: #fff !important;
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 20px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 280px !important;
+        min-width: 280px !important;
+        max-width: 280px !important;
+        padding: 20px 15px !important;
         margin-bottom: 20px !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 8px !important;
@@ -289,6 +307,8 @@
         overflow-x: hidden !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
+        scroll-snap-align: start !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
       }
       
       .scoreboard-gameplan-icon-bg {
@@ -330,6 +350,26 @@
         max-width: 100% !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
+      }
+      
+      /* Add scroll indicator for mobile */
+      .scoreboard-gameplan-grid::after {
+        content: "← Swipe to see more →" !important;
+        position: absolute !important;
+        bottom: -30px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+        pointer-events: none !important;
+      }
+      
+      /* Hide scroll indicator on larger screens */
+      @media (min-width: 769px) {
+        .scoreboard-gameplan-grid::after {
+          display: none !important;
+        }
       }
       
       /* Fix contact section */
@@ -982,23 +1022,35 @@
                 margin-right: auto;
               }
               .scoreboard-gameplan-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, auto);
-                gap: 20px;
-                justify-items: center;
-                max-width: 800px;
-                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 15px;
+                padding: 0 15px;
               }
               .scoreboard-gameplan-item {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                background: none;
-                border-radius: 16px;
-                padding: 32px 18px 28px 18px;
-                min-width: 0;
-                transition: background 0.2s;
+                width: 280px;
+                min-width: 280px;
+                max-width: 280px;
+                padding: 20px 15px;
+                margin-bottom: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                text-align: center;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                scroll-snap-align: start;
+                background-color: rgba(255, 255, 255, 0.05);
               }
               .scoreboard-gameplan-icon-bg {
                 display: flex;
