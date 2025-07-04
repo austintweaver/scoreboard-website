@@ -12,27 +12,24 @@
   <style>
     /* Aggressive Mobile Fixes - Target actual classes */
     
-    /* Force mobile viewport */
-    @media (max-width: 768px) {
-      /* Basic mobile setup */
-      body, html {
-        font-size: 16px !important;
-        line-height: 1.5 !important;
-        color: #fff !important;
-        background-color: #0c0c0c !important;
-        -webkit-text-size-adjust: 100% !important;
-        -ms-text-size-adjust: 100% !important;
-        overflow-x: hidden !important;
-        width: 100% !important;
-        max-width: 100% !important;
-      }
+          /* Force mobile viewport */
+      @media (max-width: 768px) {
+        /* Basic mobile setup */
+        body, html {
+          font-size: 16px !important;
+          line-height: 1.5 !important;
+          color: #fff !important;
+          background-color: #0c0c0c !important;
+          -webkit-text-size-adjust: 100% !important;
+          -ms-text-size-adjust: 100% !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
       
       /* Fix viewport and container overflow */
       .l-viewport {
         width: 100% !important;
         max-width: 100% !important;
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
       }
       
       .l-wrapper {
@@ -40,13 +37,11 @@
         max-width: 100% !important;
         padding: 0 15px !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
       }
       
       .container {
         width: 100% !important;
         max-width: 100% !important;
-        overflow-x: hidden !important;
         box-sizing: border-box !important;
       }
       
@@ -54,7 +49,6 @@
       .l-section {
         width: 100% !important;
         max-width: 100% !important;
-        overflow-x: hidden !important;
         box-sizing: border-box !important;
       }
       
@@ -289,6 +283,7 @@
         -webkit-overflow-scrolling: touch !important;
         gap: 15px !important;
         padding: 0 15px !important;
+        position: relative !important;
       }
       
       .scoreboard-gameplan-item {
@@ -313,11 +308,21 @@
       
       .scoreboard-gameplan-icon-bg {
         color: #fff !important;
-        display: block !important;
-        text-align: center !important;
-        margin-bottom: 15px !important;
-        width: 100% !important;
-        max-width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 50% !important;
+        background: #ffffff !important;
+        margin: 0 auto 15px auto !important;
+        flex-shrink: 0 !important;
+      }
+      
+      .scoreboard-gameplan-icon-bg svg {
+        width: 28px !important;
+        height: 28px !important;
+        stroke: #333 !important;
       }
       
       .scoreboard-gameplan-content {
@@ -963,7 +968,7 @@
               <div class="scoreboard-gameplan-grid">
                 <div class="scoreboard-gameplan-item">
                   <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
                   </span>
                   <div class="scoreboard-gameplan-content">
                     <div class="scoreboard-gameplan-title">Guidance</div>
@@ -972,7 +977,7 @@
                 </div>
                 <div class="scoreboard-gameplan-item">
                   <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M21 15v-2a2 2 0 0 0-2-2h-4"/><path d="M3 15v-2a2 2 0 0 1 2-2h4"/></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M21 15v-2a2 2 0 0 0-2-2h-4"/><path d="M3 15v-2a2 2 0 0 1 2-2h4"/></svg>
                   </span>
                   <div class="scoreboard-gameplan-content">
                     <div class="scoreboard-gameplan-title">Advocacy</div>
@@ -981,7 +986,7 @@
                 </div>
                 <div class="scoreboard-gameplan-item">
                   <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
                   </span>
                   <div class="scoreboard-gameplan-content">
                     <div class="scoreboard-gameplan-title">Management</div>
@@ -990,7 +995,7 @@
                 </div>
                 <div class="scoreboard-gameplan-item">
                   <span class="scoreboard-gameplan-icon-bg">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M12 19v-6"/><path d="M9 19h6"/></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M12 19v-6"/><path d="M9 19h6"/></svg>
                   </span>
                   <div class="scoreboard-gameplan-content">
                     <div class="scoreboard-gameplan-title">Execution</div>
@@ -1059,8 +1064,10 @@
                 width: 56px;
                 height: 56px;
                 border-radius: 50%;
-                background: #f3f4f6;
+                background: #ffffff;
                 margin-bottom: 18px;
+                margin-left: auto;
+                margin-right: auto;
               }
               .scoreboard-gameplan-title {
                 font-size: 1.13rem;
