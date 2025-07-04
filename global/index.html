@@ -935,16 +935,33 @@
               </div>
             </div>
             <style>
+              .work.scoreboard-who-we-are {
+                display: block !important;
+                height: auto !important;
+                justify-content: flex-start !important;
+              }
               .scoreboard-who-we-are {
                 text-align: center;
                 color: #fff;
                 max-width: 900px;
                 margin: 0 auto;
-                padding: 0 8px 30px 8px;
+                padding: 70px 8px 30px 8px;
+              }
+              @media (max-width: 900px) {
+                .scoreboard-who-we-are {
+                  max-width: 98vw;
+                  padding: 50px 4vw 30px 4vw;
+                }
+              }
+              @media (max-width: 600px) {
+                .scoreboard-who-we-are {
+                  padding: 30px 3vw 20px 3vw;
+                }
               }
               .scoreboard-who-we-are h2 {
                 font-size: 2.1rem;
                 font-weight: 900;
+                margin-top: 0;
                 margin-bottom: 12px;
               }
               .scoreboard-who-sub {
