@@ -12,6 +12,56 @@
   <style>
     /* Aggressive Mobile Fixes - Target actual classes */
     
+    /* Landscape orientation message */
+    .landscape-message {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0c0c0c;
+      z-index: 9999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .landscape-message img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+    
+    .landscape-message h2 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+    
+    .landscape-message p {
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.4;
+      max-width: 300px;
+    }
+    
+    @media (max-width: 768px) and (orientation: landscape) {
+      .landscape-message {
+        display: flex;
+      }
+      
+      /* Hide main content when landscape message is shown */
+      .perspective {
+        display: none;
+      }
+    }
+    
           /* Force mobile viewport */
       @media (max-width: 768px) {
         /* Basic mobile setup */
@@ -64,7 +114,6 @@
         max-width: 100% !important;
         padding: 20px 15px !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
       }
       
       .intro--banner {
@@ -72,7 +121,6 @@
         max-width: 100% !important;
         padding: 20px 0 !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
       }
       
       .intro--banner h1 {
@@ -116,7 +164,6 @@
         max-width: 100% !important;
         width: 100% !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
       }
@@ -160,7 +207,6 @@
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
       }
       
       .scoreboard-who-bullets > div {
@@ -169,7 +215,6 @@
         max-width: 100% !important;
         margin-bottom: 10px !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
       }
       
       .scoreboard-who-bullets p {
@@ -496,6 +541,29 @@
       .mobile-nav {
         display: block !important;
       }
+
+      @media (max-width: 700px) {
+        .header--nav-toggle {
+          width: 38px !important;
+          height: 38px !important;
+          min-width: 38px !important;
+          min-height: 38px !important;
+          max-width: 38px !important;
+          max-height: 38px !important;
+          padding: 6px !important;
+          margin: 0 8px 0 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        .header--nav-toggle span,
+        .header--nav-toggle span:before,
+        .header--nav-toggle span:after {
+          height: 3px !important;
+          width: 24px !important;
+          border-radius: 2px !important;
+        }
+      }
     }
     
     /* Extra small devices */
@@ -611,35 +679,48 @@
 
     @media (max-width: 700px) {
       .intro--banner {
-        height: auto !important;
-        min-height: 180px !important;
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
+        height: auto !important;
+        min-height: 140px !important;
         position: static !important;
-        padding: 32px 0 16px 0 !important;
+        padding: 18px 0 10px 0 !important;
+        gap: 18px !important;
       }
       .intro--banner img {
         position: static !important;
-        width: 140px !important;
-        max-width: 80vw !important;
-        margin: 0 auto 18px auto !important;
+        width: 90px !important;
+        max-width: 30vw !important;
+        height: auto !important;
+        margin: 0 !important;
         display: block !important;
+        flex-shrink: 0 !important;
       }
       .intro--banner h1 {
         position: static !important;
-        text-align: center !important;
-        font-size: 2rem !important;
+        text-align: left !important;
+        font-size: 1.2rem !important;
         margin: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        line-height: 1.2 !important;
+        width: auto !important;
+        max-width: 60vw !important;
+        line-height: 1.15 !important;
+        font-weight: 900 !important;
+        letter-spacing: 0.5px !important;
+        color: #fff !important;
       }
     }
   </style>
 </head>
 <body>
+
+<!-- Landscape orientation message for mobile -->
+<div class="landscape-message">
+  <img src="assets/img/scoreboard-logo-white.png" alt="Scoreboard Strategy">
+  <h2>Please Rotate Your Device</h2>
+  <p>For the best experience, please turn your phone to portrait mode.</p>
+</div>
 
 <!-- notification for small viewports and landscape oriented smartphones -->
 <div class="device-notification">
