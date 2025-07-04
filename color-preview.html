@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Blue Color Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .color-preview {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .color-swatch {
+            width: 200px;
+            height: 200px;
+            background-color: #8C1C13;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            border: 2px solid #ddd;
+        }
+        .color-info {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .hex-code {
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: bold;
+            color: #8C1C13;
+            margin: 10px 0;
+        }
+        .color-name {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .comparison-item {
+            flex: 1;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .comparison-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+        }
+        .comparison-label {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-preview">
+        <h1>Color Preview</h1>
+        
+        <div class="color-swatch"></div>
+        
+        <div class="color-info">
+            <div class="color-name">Dark Red</div>
+            <div class="hex-code">#8C1C13</div>
+            <p>RGB: 140, 28, 19</p>
+            <p>HSL: 4°, 76%, 31%</p>
+        </div>
+        
+        <h3>Comparison with your site's blue:</h3>
+        <div class="comparison">
+            <div class="comparison-item">
+                <div class="comparison-swatch" style="background-color: #8C1C13;"></div>
+                <div class="comparison-label">Dark Red</div>
+                <div class="comparison-label">#8C1C13</div>
+            </div>
+            <div class="comparison-item">
+                <div class="comparison-swatch" style="background-color: #0f33ff;"></div>
+                <div class="comparison-label">Your Site Blue</div>
+                <div class="comparison-label">#0f33ff</div>
+            </div>
+        </div>
+        
+        <p><strong>Dark Red (#8C1C13)</strong> is a rich, sophisticated color that's more professional and elegant compared to the bright blue (#0f33ff) previously used on your site. It has a refined, corporate feel that's often used in business and professional contexts.</p>
+    </div>
+</body>
+</html> 

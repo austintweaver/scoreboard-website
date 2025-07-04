@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Scoreboard Strategy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Austin Weaver">
+  <link rel="stylesheet" href="assets/css/main.css?v=1">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/logo.png" alt="Global">
+    <p>Global</p>
+  </a>
+  <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#" onclick="goToHome(); return false;">
+            <img src="assets/img/scoreboard-logo-white.png" alt="Scoreboard" style="width: 150px; height: auto;">
+          </a>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>What We Do</span></li>
+            <li><span>Services</span></li>
+            <li><span>GAME Plan</span></li>
+            <li><span>Team</span></li>
+            <li><span>Contact</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner" style="height: 300px; position: relative;">
+                <style>
+                  .intro--banner::before,
+                  .intro--banner::after {
+                    display: none !important;
+                  }
+                  .side-nav li:nth-child(6)::before {
+                    content: "06" !important;
+                  }
+                </style>
+                <img src="assets/img/scoreboard-logo-white.png" alt="Scoreboard Logo" style="position: absolute; top: 20px; left: -12px; width: 400px; height: auto; max-width: 100%;">
+                <h1 style="position: absolute; right: 0; top: 50px; text-align: right;">Win.<br>Where It<br>Matters Most.</h1>
+              </div>
+
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work scoreboard-who-we-are">
+              <h2>Who We Are</h2>
+              <p class="scoreboard-who-desc">Scoreboard Strategy delivers fractional business consulting designed to help athletes, entertainers, executives, and organizations operate more efficiently, scale with confidence, and make smarter decisions. Our subscription-based model provides access to high-level strategic support—without the cost or commitment of a full-time hire.</p>
+              <p class="scoreboard-who-desc">From optimizing operations to guiding growth initiatives, we provide tailored solutions that meet clients where they are and deliver winning results.</p>
+              <div class="scoreboard-who-bullets">
+                <div>
+                  <p><span class="scoreboard-check">✔️</span> Strategic business consulting for operations, growth, and development.</p>
+                  <p><span class="scoreboard-check">✔️</span> Fractional executive support to fill gaps in leadership and decision-making.</p>
+                </div>
+                <div>
+                  <p><span class="scoreboard-check">✔️</span> Scalable solutions built to evolve with your business.</p>
+                  <p><span class="scoreboard-check">✔️</span> Subscription-based pricing for predictability and affordability.</p>
+                </div>
+              </div>
+              <p class="scoreboard-who-desc scoreboard-who-final">Whether you're building something new or taking your operation to the next level, Scoreboard Strategy is your partner in winning where it matters most.</p>
+            </div>
+            <style>
+              .scoreboard-who-we-are {
+                text-align: center;
+                color: #fff;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 48px 8px 56px 8px;
+              }
+              .scoreboard-who-we-are h2 {
+                font-size: 2.1rem;
+                font-weight: 900;
+                margin-bottom: 28px;
+              }
+              .scoreboard-who-desc {
+                font-size: 1.08rem;
+                line-height: 1.6;
+                margin-bottom: 28px;
+              }
+              .scoreboard-who-bullets {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+                margin-bottom: 28px;
+              }
+              .scoreboard-who-bullets > div {
+                flex: 1 1 320px;
+                min-width: 220px;
+                max-width: 420px;
+                text-align: left;
+                margin: 0 8px;
+              }
+              .scoreboard-who-bullets p {
+                font-size: 1.08rem;
+                margin-bottom: 16px;
+                display: flex;
+                align-items: flex-start;
+              }
+              .scoreboard-check {
+                font-size: 1.2rem;
+                margin-right: 10px;
+                line-height: 1;
+              }
+              .scoreboard-who-final {
+                margin-bottom: 0;
+              }
+              @media (max-width: 900px) {
+                .scoreboard-who-we-are {
+                  max-width: 98vw;
+                  padding: 24px 4vw 40px 4vw;
+                }
+                .scoreboard-who-bullets {
+                  flex-direction: column;
+                  gap: 0;
+                }
+                .scoreboard-who-bullets > div {
+                  max-width: 100%;
+                  min-width: 0;
+                  margin: 0 0 12px 0;
+                }
+                .scoreboard-who-we-are h2 {
+                  font-size: 2rem;
+                }
+                .scoreboard-who-desc {
+                  font-size: 1rem;
+                }
+              }
+              @media (max-width: 600px) {
+                .scoreboard-who-we-are {
+                  padding: 12px 2vw 24px 2vw;
+                }
+                .scoreboard-who-we-are h2 {
+                  font-size: 1.3rem;
+                }
+                .scoreboard-who-desc {
+                  font-size: 0.95rem;
+                }
+                .scoreboard-who-bullets p {
+                  font-size: 0.95rem;
+                }
+                .scoreboard-check {
+                  font-size: 1.1rem;
+                }
+              }
+            </style>
+          </li>
+          <li class="l-section section">
+            <div class="scoreboard-services-minimal">
+              <h2>What We Do</h2>
+              <div class="scoreboard-services-list">
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">Fractional General Counsel</span>
+                    <span class="scoreboard-service-desc">Expert legal guidance and strategic counsel for your organization on a flexible, as-needed basis.</span>
+                  </span>
+                </div>
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">Fractional COO</span>
+                    <span class="scoreboard-service-desc">Experienced operational leadership to optimize your organization's efficiency and performance.</span>
+                  </span>
+                </div>
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">Strategy Consulting</span>
+                    <span class="scoreboard-service-desc">Comprehensive strategic planning and execution support to achieve your organizational goals.</span>
+                  </span>
+                </div>
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">Revenue Strategy</span>
+                    <span class="scoreboard-service-desc">Data-driven approaches to optimize revenue streams and maximize financial performance.</span>
+                  </span>
+                </div>
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M12 19v-6"/><path d="M9 19h6"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">Start-up Advising</span>
+                    <span class="scoreboard-service-desc">Specialized guidance for emerging organizations to navigate growth and development challenges.</span>
+                  </span>
+                </div>
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">Team Business Operations</span>
+                    <span class="scoreboard-service-desc">Tailored solutions for sports teams to enhance operations and business performance.</span>
+                  </span>
+                </div>
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">Crisis Management</span>
+                    <span class="scoreboard-service-desc">Strategic support for managing critical situations and conducting thorough investigations.</span>
+                  </span>
+                </div>
+                <div class="scoreboard-service-row" tabindex="0">
+                  <span class="scoreboard-service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/><path d="M17 11v2a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-2"/></svg>
+                  </span>
+                  <span class="scoreboard-service-content">
+                    <span class="scoreboard-service-title">HR Strategy &amp; Management</span>
+                    <span class="scoreboard-service-desc">Comprehensive human resources solutions to build and maintain high-performing teams.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <style>
+              .scoreboard-services-minimal {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 100px 8px 56px 8px;
+                color: #fff;
+                text-align: center;
+              }
+              .scoreboard-services-minimal h2 {
+                font-size: 2.1rem;
+                font-weight: 900;
+                margin-bottom: 28px;
+              }
+              .scoreboard-services-list {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+                align-items: stretch;
+              }
+              .scoreboard-service-row {
+                display: flex;
+                align-items: flex-start;
+                gap: 22px;
+                text-align: left;
+                cursor: pointer;
+                outline: none;
+              }
+              .scoreboard-service-row:focus {
+                box-shadow: 0 0 0 2px #8C1C13;
+                border-radius: 6px;
+              }
+              .scoreboard-service-icon {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                margin-top: 2px;
+              }
+              .scoreboard-service-content {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+              }
+              .scoreboard-service-title {
+                font-size: 1.08rem;
+                font-weight: 700;
+                margin-bottom: 2px;
+                color: #fff;
+              }
+              .scoreboard-service-desc {
+                font-size: 0.97rem;
+                color: #e0e0e0;
+                line-height: 1.5;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: max-height 0.3s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+                pointer-events: none;
+              }
+              .scoreboard-service-row:hover .scoreboard-service-desc,
+              .scoreboard-service-row:focus .scoreboard-service-desc {
+                max-height: 200px;
+                opacity: 1;
+                pointer-events: auto;
+                margin-top: 4px;
+              }
+              @media (max-width: 700px) {
+                .scoreboard-services-minimal {
+                  padding: 12px 2vw 18px 2vw;
+                }
+                .scoreboard-services-list {
+                  gap: 18px;
+                }
+                .scoreboard-service-row {
+                  gap: 12px;
+                }
+                .scoreboard-service-title {
+                  font-size: 1rem;
+                }
+                .scoreboard-service-desc {
+                  font-size: 0.91rem;
+                }
+                .scoreboard-service-icon {
+                  width: 28px;
+                  height: 28px;
+                }
+              }
+              @media (max-width: 500px) {
+                .scoreboard-service-row {
+                  flex-direction: column;
+                  align-items: flex-start;
+                  gap: 6px;
+                }
+                .scoreboard-service-icon {
+                  margin-top: 0;
+                }
+              }
+            </style>
+          </li>
+          <li class="l-section section">
+            <div class="scoreboard-gameplan">
+              <h2>The GAME Plan</h2>
+              <div class="scoreboard-gameplan-sub">Subscription-based support for athletes, coaches, administrators, entertainers and creators. No commissions, just outcomes.</div>
+              <div class="scoreboard-gameplan-grid">
+                <div class="scoreboard-gameplan-item">
+                  <span class="scoreboard-gameplan-icon-bg">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
+                  </span>
+                  <div class="scoreboard-gameplan-content">
+                    <div class="scoreboard-gameplan-title">Guidance</div>
+                    <div class="scoreboard-gameplan-desc">Expert advice to help navigate your journey</div>
+                  </div>
+                </div>
+                <div class="scoreboard-gameplan-item">
+                  <span class="scoreboard-gameplan-icon-bg">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M21 15v-2a2 2 0 0 0-2-2h-4"/><path d="M3 15v-2a2 2 0 0 1 2-2h4"/></svg>
+                  </span>
+                  <div class="scoreboard-gameplan-content">
+                    <div class="scoreboard-gameplan-title">Advocacy</div>
+                    <div class="scoreboard-gameplan-desc">Protecting your interests and rights</div>
+                  </div>
+                </div>
+                <div class="scoreboard-gameplan-item">
+                  <span class="scoreboard-gameplan-icon-bg">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  </span>
+                  <div class="scoreboard-gameplan-content">
+                    <div class="scoreboard-gameplan-title">Management</div>
+                    <div class="scoreboard-gameplan-desc">Professional oversight of your business matters</div>
+                  </div>
+                </div>
+                <div class="scoreboard-gameplan-item">
+                  <span class="scoreboard-gameplan-icon-bg">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M12 19v-6"/><path d="M9 19h6"/></svg>
+                  </span>
+                  <div class="scoreboard-gameplan-content">
+                    <div class="scoreboard-gameplan-title">Execution</div>
+                    <div class="scoreboard-gameplan-desc">Implementation of strategies for your success</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <style>
+              .scoreboard-gameplan {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 48px 8px 56px 8px;
+                color: #fff;
+                text-align: center;
+              }
+              .scoreboard-gameplan h2 {
+                font-size: 2.2rem;
+                font-weight: 900;
+                margin-bottom: 18px;
+              }
+              .scoreboard-gameplan-sub {
+                font-size: 1.18rem;
+                color: #e0e0e0;
+                margin-bottom: 44px;
+                font-weight: 400;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              .scoreboard-gameplan-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 20px;
+                justify-items: center;
+                max-width: 800px;
+                margin: 0 auto;
+              }
+              .scoreboard-gameplan-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: none;
+                border-radius: 16px;
+                padding: 32px 18px 28px 18px;
+                min-width: 0;
+                transition: background 0.2s;
+              }
+              .scoreboard-gameplan-icon-bg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background: #f3f4f6;
+                margin-bottom: 18px;
+              }
+              .scoreboard-gameplan-title {
+                font-size: 1.13rem;
+                font-weight: 700;
+                margin-bottom: 8px;
+                color: #fff;
+              }
+              .scoreboard-gameplan-desc {
+                font-size: 1rem;
+                color: #e0e0e0;
+                font-weight: 400;
+              }
+              @media (max-width: 700px) {
+                .scoreboard-gameplan {
+                  padding: 24px 2vw 32px 2vw;
+                }
+                .scoreboard-gameplan-grid {
+                  grid-template-columns: 1fr;
+                  grid-template-rows: none;
+                  gap: 18px;
+                }
+                .scoreboard-gameplan-item {
+                  padding: 18px 6px 14px 6px;
+                }
+                .scoreboard-gameplan h2 {
+                  font-size: 1.4rem;
+                }
+                .scoreboard-gameplan-sub {
+                  font-size: 1rem;
+                }
+                .scoreboard-gameplan-title {
+                  font-size: 1rem;
+                }
+                .scoreboard-gameplan-desc {
+                  font-size: 0.93rem;
+                }
+                .scoreboard-gameplan-icon-bg {
+                  width: 38px;
+                  height: 38px;
+                  margin-bottom: 10px;
+                }
+              }
+            </style>
+          </li>
+          <li class="l-section section">
+            <div class="team-section" style="display: flex; align-items: flex-start; justify-content: center; max-width: 1000px; margin: 0 auto; padding: 100px 20px 80px 20px; color: #fff;">
+              <div class="team-image" style="flex: 1; text-align: center; padding-right: 40px; padding-top: 80px;">
+                <img src="assets/img/weaver-headshot.jpeg" alt="Austin Weaver" style="width: 350px; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+              </div>
+              <div class="team-content" style="flex: 2; padding-top: 40px;">
+                <h2 style="font-size: 42px; font-weight: 900; margin-bottom: 24px;">Austin Weaver</h2>
+                <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 18px; color: #e0e0e0;">Founder & CEO</h3>
+                <p style="font-size: 20px; line-height: 1.5; color: #e0e0e0;">Austin Weaver is the Founder and CEO of Scoreboard Strategy. With a passion for helping athletes, entertainers, and organizations reach their full potential, Austin brings years of experience in business strategy, operations, and leadership. His mission is to deliver high-impact consulting and strategic support that empowers clients to win on and off the field.</p>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="scoreboard-contact">
+              <h2>Let's Get To Work</h2>
+              <p class="scoreboard-contact-sub">Ready to take your organization to the next level?<br>Let's discuss how Scoreboard Strategy can help you win where it matters most.</p>
+              
+              <div class="scoreboard-contact-form">
+                <form id="contact-form">
+                  <div class="scoreboard-form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="scoreboard-form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="scoreboard-form-group">
+                    <input type="text" id="company" name="company" placeholder="Company/Organization">
+                  </div>
+                  <div class="scoreboard-form-group">
+                    <textarea id="message" name="message" placeholder="Tell us about your needs..." rows="5" required></textarea>
+                  </div>
+                  <button type="submit" class="scoreboard-submit-btn">Submit</button>
+                </form>
+              </div>
+            </div>
+            <style>
+              .scoreboard-contact {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 100px 8px 56px 8px;
+                color: #fff;
+                text-align: center;
+              }
+              .scoreboard-contact h2 {
+                font-size: 2.1rem;
+                font-weight: 900;
+                margin-bottom: 18px;
+              }
+              .scoreboard-contact-sub {
+                font-size: 1.08rem;
+                color: #e0e0e0;
+                margin-bottom: 48px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              .scoreboard-contact-form {
+                max-width: 500px;
+                margin: 0 auto;
+                text-align: center;
+              }
+              .scoreboard-form-group {
+                margin-bottom: 20px;
+              }
+              .scoreboard-form-group input,
+              .scoreboard-form-group select,
+              .scoreboard-form-group textarea {
+                width: 100%;
+                padding: 12px 16px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.05);
+                color: #fff;
+                font-size: 1rem;
+                font-family: inherit;
+                transition: border-color 0.2s, background 0.2s;
+              }
+              .scoreboard-form-group input::placeholder,
+              .scoreboard-form-group textarea::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+              }
+              .scoreboard-form-group input:focus,
+              .scoreboard-form-group select:focus,
+              .scoreboard-form-group textarea:focus {
+                outline: none;
+                border-color: #8C1C13;
+                background: rgba(255, 255, 255, 0.1);
+              }
+              .scoreboard-submit-btn {
+                width: 200px;
+                padding: 14px 24px;
+                background: #8C1C13;
+                color: #fff;
+                border: none;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.2s;
+                margin: 20px auto 0 auto;
+                display: block;
+              }
+              .scoreboard-submit-btn:hover {
+                background: #0a2bd9;
+              }
+              @media (max-width: 700px) {
+                .scoreboard-contact {
+                  padding: 60px 2vw 40px 2vw;
+                }
+                .scoreboard-contact-container {
+                  grid-template-columns: 1fr;
+                  gap: 40px;
+                }
+                .scoreboard-contact h2 {
+                  font-size: 1.8rem;
+                }
+                .scoreboard-contact-sub {
+                  font-size: 1rem;
+                }
+                .scoreboard-contact-item {
+                  margin-bottom: 24px;
+                }
+              }
+            </style>
+          </li>
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Your 6th Section Content</p>
+                    <a href="mailto:contact@scoreboard.com">contact@scoreboard.com</a>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a href="#0">Section 6</a></li>
+                    <li><a href="#0">Additional Info</a></li>
+                    <li><a href="mailto:contact@scoreboard.com">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>What We Do</li>
+    <li>Services</li>
+    <li>GAME Plan</li>
+    <li>Team</li>
+    <li>Contact</li>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js?v=1"></script>
+<script>
+function goToHome() {
+  // Activate the first section (Home)
+  $('.section').removeClass('section--is-active');
+  $('.l-section').first().addClass('section--is-active');
+  
+  // Update side navigation
+  $('.side-nav li').removeClass('is-active');
+  $('.side-nav li').first().addClass('is-active');
+  
+  // Update outer navigation
+  $('.outer-nav li').removeClass('is-active');
+  $('.outer-nav li').first().addClass('is-active');
+  
+  // Scroll to top
+  $('html, body').animate({scrollTop: 0}, 500);
+}
+</script>
+</body>
+</html>
